@@ -4,10 +4,10 @@
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="title">
-            Application
+            UX Manual
           </v-list-item-title>
           <v-list-item-subtitle>
-            subtext
+            A reference guide
           </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
@@ -21,7 +21,7 @@
           </v-list-item-icon>
 
           <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
+            <router-link :to="item.url">{{ item.title }}</router-link>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -74,9 +74,8 @@ export default {
     //
     drawer: true,
     items: [
-      { title: "Dashboard", icon: "mdi-view-dashboard" },
-      { title: "Photos", icon: "mdi-image" },
-      { title: "About", icon: "mdi-help-box" }
+      { title: "Dashboard", icon: "mdi-view-dashboard", url: "/" },
+      { title: "About", icon: "mdi-help-box", url: "/about" }
     ],
     right: null
   })
