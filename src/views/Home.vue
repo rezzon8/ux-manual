@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <button @click="handleGet()">asda</button>
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
@@ -12,6 +13,12 @@ export default {
   name: "Home",
   components: {
     HelloWorld
+  },
+  methods: {
+    handleGet() {
+      this.$http.get("https://www.reddit.com/r/all/top.json?limit=30&count=30");
+      console.log("asdd");
+    }
   }
 };
 </script>
