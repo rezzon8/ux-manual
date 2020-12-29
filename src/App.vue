@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer app v-model="drawer">
+    <!-- <v-navigation-drawer app v-model="drawer">
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="title">
@@ -25,9 +25,9 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
-    </v-navigation-drawer>
+    </v-navigation-drawer> -->
     <v-app-bar app color="primary" dark elevation="0">
-      <v-icon @click="drawer = !drawer">
+      <v-icon @click="loadData()">
         mdi-menu
       </v-icon>
 
@@ -55,12 +55,24 @@ export default {
 
   data: () => ({
     //
-    drawer: true,
-    items: [
-      { title: "Dashboard", icon: "mdi-view-dashboard", url: "/" },
-      { title: "About", icon: "mdi-help-box", url: "/about" }
-    ],
-    right: null
-  })
+    // drawer: true,
+    // items: [
+    //   { title: "Dashboard", icon: "mdi-view-dashboard", url: "/" },
+    //   { title: "About", icon: "mdi-help-box", url: "/about" }
+    // ],
+    // right: null
+  }),
+  methods: {
+    loadData() {
+      this.$store
+        .dispatch("GET_DATA")
+        .then(() => {
+          console.log("asdas");
+        })
+        .catch(e => {
+          console.log(e.message, "oopp");
+        });
+    }
+  }
 };
 </script>

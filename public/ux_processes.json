@@ -1,0 +1,1743 @@
+{
+  "ux_processes": [
+    {
+      "id": 1,
+      "title": "UX Audit",
+      "icon": "looks_one",
+      "copy": "After a kickoff meeting about your goals and mission, we conduct a UX review of your current status. As a result, you get an analysis stating the opportunities to develop. We offer UX Audit as an independent service as well.",
+      "href": "ux_audit",
+      "color": "#49c5ae",
+      "image": "https://cdn.vuetifyjs.com/images/cards/desert.jpg"
+    },
+    {
+      "id": 2,
+      "title": "UX Research",
+      "icon": "looks_two",
+      "copy": "Next to the business goals, the users' goals are equally important. We gain insights, get to know you users' needs, goals, understand their behavior and context.",
+      "href": "ux_research",
+      "color": "#a8ce62",
+      "image": "https://cdn.vuetifyjs.com/images/cards/desert.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Data Analysis",
+      "icon": "looks_3",
+      "copy": "After collecting data from your users, we utilize different methods to synthesize the insights. This phase will enable us to conduct the design phase with the users’ needs in mind.",
+      "href": "data_analysis",
+      "color": "#ffc200",
+      "image": "https://cdn.vuetifyjs.com/images/cards/desert.jpg"
+    },
+    {
+      "id": 4,
+      "title": "UX Design",
+      "icon": "looks_4",
+      "copy": "Based on the insights got from both the businesses and the users’ side we design how your users will be able to interact with your product or service.",
+      "href": "ux_design",
+      "color": "#ed1561",
+      "image": "https://cdn.vuetifyjs.com/images/cards/desert.jpg"
+    },
+    {
+      "id": 5,
+      "title": "UX Testing",
+      "icon": "looks_5",
+      "copy": "Our design process is iterative: we test the prototype to identify areas that need to be developed.",
+      "href": "ux_testing",
+      "color": "#9d1db3",
+      "image": "https://cdn.vuetifyjs.com/images/cards/desert.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Visual Design",
+      "icon": "looks_6",
+      "copy": "To provide a consistent look and feel, to express your brand’s personality, we add a clean and coherent visual layer to our design.",
+      "href": "visual_design",
+      "color": "#00a7f8",
+      "image": "https://cdn.vuetifyjs.com/images/cards/desert.jpg"
+    }
+  ],
+  "process_steps": [
+    {
+      "id": 1,
+      "ux_process_id": 1,
+      "title": "Stakeholder Interview",
+      "copy": {
+        "introduction": [
+          "We kick-off each project with a meeting with you: we need to talk about your mission, goals and context. This meeting ensures that we start the UX design process by understanding the problem. We also need to have a good knowledge of your domain in order to ask the right questions, find the best solutions."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "As a result of the stakeholder interview, we gain better understanding of the business goals and your mission, and we also become mini-experts of the given domain."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get? - FOO",
+          "copy": [
+            "After the stakeholder interview and domain expert interviews, we provide you a structured document about the insights we collected. We both will use it as a reference point throughout the whole project."
+          ]
+        },
+        "additional_info": [
+          "Next to the Stakeholder Interviews, we also interview the domain experts in order to understand the problem space better. For example if we design the interface of a device used by healthcare professionals, we need to know the important steps of the process, the context, under what circumstances is it going to be used and so on."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": [
+            "At the beginning of a UX research and design project we conduct a Stakeholder Interview in order to find out the following:"
+          ],
+          "steps": [
+            "What are your business goals?",
+            "Do you have any existing research or design material?",
+            "What do you already know about your users (target audience)?",
+            "Your background, story and mission",
+            "Who are your known competitors?",
+            "Additional project-related information (deadlines, team members etc.)"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 2,
+      "ux_process_id": 1,
+      "title": "Heuristic Evaluation",
+      "copy": {
+        "introduction": [
+          "We evaluate the usability and user experience of your website or application using a set of predefined factors (these are the usability heuristics). It is a good starting point for a project, however, it can't be as valuable as a Usability Test: a UX expert is able to point out some areas where improvement would be needed, but you should ask and observe your users as well."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Heuristic Evaluation is an efficient way of pointing out some user interface errors and defects: it allows you to get quick feedback, and to determine what areas should be developed in the future."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "We provide you a detailed analysis containing how we evaluated your interface against more than 200 usability guidelines and our recommendations on what should a future redesign focus on."
+          ]
+        },
+        "additional_info": [
+          "During the heuristic evaluation, we keep in mind that this is not about our opinions, rather it is viewing things from your users' perspective. Another important rule is that we do this as a team, so we can discuss each points after the evaluation. To understand your users' perspective, we need to have a prior knowledge of their goals, that is why we start each project with a Stakeholder Interview (kickoff meeting) with you."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": [
+            "We review your website (its user interface) using a list of more than 200 usability guidelines. These guidelines cover the following topics:"
+          ],
+          "steps": [
+            "Homepage usability",
+            "Task orientation and site functionality",
+            "Navigation and Information Architecture",
+            "Forms and data entry",
+            "Trust and credibility",
+            "Writing and content quality",
+            "Page layout and visual design",
+            "Search usability",
+            "Help, feedback and error tolerance"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 3,
+      "ux_process_id": 1,
+      "title": "Content Inventory",
+      "copy": {
+        "introduction": [
+          "Creating a Content Inventory means that we write an index of your website's or application's content. There can be different reasons for conducting it, but basically it helps to identify what content is available on your website or application."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "It depends on the goal, but in general it helps you to get to know the website’s content in an organized way. It also helps to point out what should be removed, rewritten or replaced."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": "You get a detailed spreadsheet with the indexed content of your website or application, and a document explaining what parts should be modified and how."
+        },
+        "additional_info": [
+          "A Content Inventory (or content audit) can serve as a great starting points for many parts of the UX design process. Overall, it enables us to see the \"whole picture\" of your service or product, taking into account each piece of your content."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": "The first step is setting the goals and the scope of your content inventory: what are we trying to accomplish, and which parts of the system or website should be examined. The most common goals are to identify",
+          "steps": [
+            "the elements of the content, and ",
+            "how these are structured, what are the existing relations (e.g. internal links)",
+            "which parts of your website or application is outdated",
+            "the redundant elements",
+            "the unnecessary parts",
+            "which are the important pieces."
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 4,
+      "ux_process_id": 1,
+      "title": "Competitive Analysis",
+      "copy": {
+        "introduction": [
+          "Taking a look at your competitors, and inspect their online services or applications serves as a good starting point for a UX design process: thanks to the Competitive Analysis method, you will know what are the other players on your market doing, how they try to achieve their goals."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "As part of a UX design process: the collected data will serve as a great starting point for the best practice research. It creates a detailed and organized picture for you about what your competitors doing at the moment."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "To complete the Competitive Analysis, the data should be summarized in a separate document. So next to the spreadsheet, you will get a detailed analysis as well."
+          ]
+        },
+        "additional_info": [
+          "To conduct a Competitive Analysis, a good way to start gathering data is to set a framework and identify factors for the analysis.",
+          "We use a spreadsheet (with for example the following columns: value proposition, elements of main navigation, content types, main functions). Next to filling in a spreadsheet, we also save screenshots of the main user flows and key screens, and comment on them. Next to defining the assessment criteria, it is also important to collect as many competitors as possible: 2 or 3 competitors can be enough (and obviously there are cases when you have only 1 competitor or no competitor at all), but the more is the better.",
+          "This is how we search for the competitors: first, we define search keywords, try different permutations. Then we write a long list, and choose the most important 5-10 competitors. We try to have a panoramic view of your competitors: include not only the main players on the market, but the new services as well. We also zoom out: for example when we conducted a Competitive Analysis for a second hand game console marketplace, we established that not only the console and console game trade (sell/buy) services are the competitors: we included all of the online used stuff marketplaces regardless what kind of items can the users sell or buy. Even in the case that you are building a service which target audience is limited to one country, it is worth to check out the similar services offered in another country or internationally. We know that different markets mean different user behavior, but these services can serve as a starting point, and help broaden your view."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": ["To sum up, our process is:"],
+          "steps": [
+            "setting a framework for the analysis",
+            "creating a spreadsheet containing different factors",
+            "collecting the list of the relevant competitors",
+            "filling in the spreadsheet with the relevant data",
+            "analyzing the collected data",
+            "writing a summary of the main findings"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 5,
+      "ux_process_id": 1,
+      "title": "Cognitive Walkthrough",
+      "copy": {
+        "introduction": [
+          "Cognitive Walkthrough is used to determine how easy it is for a new or infrequent user to carry out tasks inside your product or system. So it is a usability inspection method, which helps to evaluate the learnability of your product or service."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Evaluating the learnability of your product or service can provide great feedback for improving the usability and user experience of it."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "You will get our analysis, which will contain the tasks, our notes, and the recommendations on how the interface should be modified."
+          ]
+        },
+        "additional_info": [
+          "After conducting a Cognitive Walkthrough, we can determine which parts of a given user flow should be more obvious, where should be more explanation, what actions should be more prominent, which texts should be rewritten and so on.",
+          "Like the Heuristic Evaluation, this method also requires us to look at your product or service from the users’ perspective. If it is possible, personas should be used in order to include different user perspectives.",
+          "During the process, the evaluators record their steps, and take notes if they find an issue. It should be highlighted that we believe that a usability test is a much more powerful tool for your ux research, since it involves real users, however, as a starting point or a way of getting quick feedback the Cognitive Walkthrough can be a valuable method to apply."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": [
+            "While the Heuristic Evaluation focuses on predefined usability heuristics, this method is task-based: we go through the most important user flows, conduct the core tasks using your user interface. While doing so, we pay attention to the following factors:"
+          ],
+          "steps": [
+            "Can your user reach the right outcome for the given task?",
+            "Will your user notice the available options?",
+            "Can your user find the correct option for what she is trying to achieve?",
+            "If the correct option has been selected, will your user notice that this takes her one step closer to the completion of the task?"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 6,
+      "ux_process_id": 2,
+      "title": "Feedback Review",
+      "copy": {
+        "introduction": [
+          "At the beginning of the UX design process, it is useful to collect all the data you already have about the users. In many cases, this already existing data includes feedback collected by your customer support."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "The initial data will help us creating a starting point for the other parts of the UX design process."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "We will provide you the summary of our analysis in a detailed document."
+          ]
+        },
+        "additional_info": [
+          "The Feedback Review can truly boost a UX design process at the start. It needs to be highlighted, however that analyzing this kind of data is not an alternative of a proper UX Research."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": [
+            "During the initial kick-off meeting with you (Stakeholder interview), we will ask you to provide all the data you already have about your users. We collect and organize the data, and look for patterns in it.",
+            "Feedback can come from many different sources, for example:"
+          ],
+          "steps": [
+            "targeted surveys",
+            "native in-app feedback",
+            "website feedback forms (like feedback boxes)",
+            "customer support calls and messages",
+            "comments on social media",
+            "reviews"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 7,
+      "ux_process_id": 2,
+      "title": "Analytics Review",
+      "copy": {
+        "introduction": [
+          "Using the power of analytics should be an integral part of any UX design process. It can not only be utilized throughout the iterative design section - when you design a solution, then measure and test out how it works, then building upon the results modify it -: in many cases our client already has web analytics tools connected to the product or service."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Thanks to this method, we can start analyzing the usage data at the very beginning of the UX design process, which contributes in creating a good starting point for research, it helps forming hypothesis, and ask the right questions."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "We will provide you the summary of our analysis in a document, supporting our findings with demonstrative diagrams."
+          ]
+        },
+        "additional_info": [
+          "It is important to know that there are two kinds of data we use during the UX design process: qualitative data and quantitative data. Qualitative data help us answer the “why” questions, and collected during the UX research (e.g. we conduct these: User interview, Diary Studies, Online Survey, Contextual inquiry). On the other hand, quantitative data is gathered thanks to analytics tools. One of the main advantages of working with quantitative data is that it provides a larger sample size (than e.g. User interviews or Usability Testing).",
+          "During the kick-off meeting (Stakeholder interview), we will ask if you have any web analytics tool already connected to you digital product or service (like Google Analytics). If you have, we can start analyzing the usage data at the very beginning of the UX design process, which contributes in creating a good starting point for research, it helps forming hypothesis, and ask the right questions. (If you don’t have such tools connected, we will suggest you to start working with them)."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": [
+            "Thanks to our Analytics Review, you can find out many things, for example you can learn about:"
+          ],
+          "steps": [
+            "What are users doing?",
+            "What are they trying to achieve?",
+            "Which pages do user visit, and in what order?",
+            "What are the entry points?",
+            "Navigation patterns: From which pages your users come from?",
+            "User engagement: bounce rates, session durations etc."
+          ],
+          "summary": [
+            "To sum up, analytics help determining which points should be improved (e.g. we can identify if the navigation is misleading, or which pages are the most frustrating)."
+          ]
+        }
+      }
+    },
+    {
+      "id": 8,
+      "ux_process_id": 2,
+      "title": "User Interview",
+      "copy": {
+        "introduction": [
+          "We believe that interviewing should be an essential part of a UX design process. Asking the right questions will allow us to get invaluable insights about your users’ goals, needs, motivations and pain points."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "The insights collected thanks to the user interviews is an invaluable primary source of research data. It will help us design products or services which are meaningful, which match the users’ needs, provide answers to their challenges, problems."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "You will get the recordings and the transcripts of the interviews. We also create a detailed document listing out the most important insights, findings, patterns we’ve revealed."
+          ]
+        },
+        "additional_info": [
+          "Conducting user interviews requires a lot of planning, it should be conducted after careful preparation. There are the most important steps of this preliminary phase:",
+          [
+            "Getting to know the problem space (e.g. by a Stakeholder Interview and domain expert interviews),",
+            "Preparing problem statements (what are the problems we need to solve, what are our hypothesis we need to validate?)",
+            "Creating an interview script with the questions. It needs to be noted that it does not mean that we will read out loud these questions during the interview, and our job is done! The interview script is just a mindmap, which will us remember what areas we need to discover.",
+            "Finding participants (and creating a screener, which basically a document which helps us identify future interviewees who meet all the important criteria - e.g. you don’t want to test your mobile app with someone who does not have a smartphone, and not planning to purchase one in the near future - obviously it is just a basic example, we will list out more specific criteria for your product or service).",
+            "Fieldwork scheduling"
+          ],
+          "We have experience with in-person interviews as well as remote Skype interviews (the latter mentioned has certain limitations, but still a very useful resource). We record the interviews, then we create a transcript.",
+          "After conducting the sufficient number of interviews, we utilize UX design methods to organize and analyze the collected data (like Affinity Diagramming, Empathy Mapping, Personas, Journey Mapping, Storyboarding).",
+          "As a result, we will not only know a lot about your users' needs and context, user interviews also help to identify assumptions: it is important to keep in mind that we are not designing for ourselves!"
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": [
+            "Our user interviews are carefully planned and conducted, these are the steps we like to follow:"
+          ],
+          "steps": [
+            "Preparation phase (recruiting participants, writing a script etc.)",
+            "Conducting the interview in-person or using Skype",
+            "Discussing what we have heard right after the interview",
+            "Reviewing our notes, creating the transcript",
+            "Using different methods to find patterns",
+            "Creating a summary with the main findings"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 9,
+      "ux_process_id": 2,
+      "title": "Diary Studies",
+      "copy": {
+        "introduction": [
+          "The main idea of this method is to collect long-term qualitative data from your users. Participants report their activities over a period of time. During User Interviews, self-reporting errors can occur, it means that people don’t always remember perfectly how they do things, and what we say is not necessarily the same as what we actually do. The diary studies method solves this issue, since it provides on-the-spot feedback."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Thanks to this method, you can collect data about your users behaviour in a long-term manner, additionally, memory issues and self-reporting errors won’t affect the results."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "We will provide you the filled-in spreadsheets and other logs made by your users, plus a detailed document containing our main findings."
+          ]
+        },
+        "additional_info": [
+          "The main goals of this method are:",
+          [
+            "understanding the problem space and the context;",
+            "discovering the most frequent use cases and the edge cases;",
+            "getting insight on the users’ habits, motivations behavior and",
+            "identifying pain points."
+          ],
+          "When conducting diary studies, the first task is setting up a framework: what should be logged by the participants, and when should they log their activities; how often should we contact with the participants; what are the follow-up phases. One of the main advantages of diary studies is that if we ask the participants to send their logs regularly, we can always ask more questions about a specific point or issue. It helps us finding patterns in the users’ behavior, and at the same time we can observe interesting scenarios and use cases."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": ["The steps of our process are:"],
+          "steps": [
+            "Determining what we want to observe, what is the focus",
+            "Setting up a framework for the research",
+            "Prepare the spreadsheet (which going to be filled by the participants)",
+            "Recruiting participants",
+            "Collecting feedback, giving more instructions if needed, asking more questions",
+            "Conducting follow-up interviews",
+            "Organize and analyze the data collected "
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 10,
+      "ux_process_id": 2,
+      "title": "Online Survey",
+      "copy": {
+        "introduction": [
+          "If an Online Survey is carefully prepared and constructed, it can be a valuable UX research method, especially if we use it as an additional, supplementary tool. It is very important, however, that you can get false results very easily!"
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Online Surveys can be a good addition to a UX research process: it is cost-effective, and you can reach a broad audience with them, getting insights and feedback from a larger amount of your users in a short period of time."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "We will provide a detailed summary of our findings, and also our recommendations on what areas should be further investigated by a follow-up interview process. Next to that, you will get all the raw data: the filled-in surveys."
+          ]
+        },
+        "additional_info": [
+          "It needs to be highlighted, that constructing Online Surveys can seem to be an easy task, but in reality, it is quite complicated, which requires practice and expertise. There are many important guidelines, rules that should be taken into consideration when designing the questions, for example:",
+          [
+            "The order of the questions should be logical",
+            "The shorter is the survey, the better: redundant questions should be removed",
+            "The wording of the questions is crucial: e.g. it should not contain double negatives or multiple questions; and it should not direct the participant towards a certain option to choose",
+            "All the possible response options should be provided (this is one of the reasons why we test the online survey before we send it out)"
+          ],
+          "Drawing the right consequences from the results is also a task that requires skills and practice, it is easy to only see the answers and patterns that support our hypothesis."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": ["The steps are:"],
+          "steps": [
+            "Determining the goals",
+            "Finding sufficient participants,",
+            "Constructing the survey itself",
+            "Testing the survey before sending it out",
+            "Analyzing the results",
+            "Creating a summary",
+            "Identify points for follow-up interviews",
+            "Conducting User Interviews"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 11,
+      "ux_process_id": 2,
+      "title": "Contextual Inquiry",
+      "copy": {
+        "introduction": [
+          "This method is about collecting insights about the users’ context by observing your users when they are performing tasks related to the problem space."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Just like Diary Studies, Contextual Inquiry also removes the memory issues from the research process: we can gain firsthand information about your users’ needs, behavior, actions, motivations and context."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "You will not only get all the documentation (audio and/or video recordings, notes, photos) of our observation and the User Interviews conducted during the site visit, we will also provide a list of the main findings."
+          ]
+        },
+        "additional_info": [
+          "The Contextual Inquiry is based on idea that what your users report and what they actually do can be two completely different thing. It is a powerful method, because it allow us to observe your users in the context of use. Next to removing the self-reporting problems, it has the potential of providing insights about steps or problems the user has not even identified, or reveal unconscious behaviors. Conducting a Contextual Inquiry helps us getting answers for example for these questions:",
+          [
+            "What tasks, actions are your users completing?",
+            "What steps create friction or unnecessary difficulty in your users’ task?",
+            "What do your users’ do to avoid or solve these steps?",
+            "What parts of the process could be improved?"
+          ]
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": ["We follow these steps:"],
+          "steps": [
+            "Setting a framework for the Contextual Inquiry",
+            "Preparing questions, main areas of interest",
+            "Identifying participants",
+            "Scheduling the site visits",
+            "Conducting the Contextual Inquiry itself",
+            "Analyzing the collected insights"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 12,
+      "ux_process_id": 3,
+      "title": "Affinity Diagramming",
+      "copy": {
+        "introduction": [
+          "Affinity diagramming is a method that used to sort the collected data into groups. It is a collaborative tool, which helps out team to identify patterns and connections in the qualitative data we got from the previous parts of the UX research process (e.g. from User Interviews and Contextual Inquiries)."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Asking the right questions, having hypotheses, and collecting interesting insights are a great things, however, we also need methods to get meaningful information from the research data. Affinity Diagramming is one of these methods: it helps our design team to find the main areas of focus, for example it can highlight pain points, areas to improve."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "Affinity Diagramming is basically a workshop: we organize the collected research data with post-its, we take notes, and articulate findings. This method itself does not result in a deliverable, which we can provide you at the end of the process. Instead, it helps us to conduct other methods, like creating Personas, or summarizing User Interviews."
+          ]
+        },
+        "additional_info": [
+          "Next to organizing research data, affinity diagramming is useful for many other things, like arranging the findings of a Usability Testing, grouping the functions of your product or service, or designing an Information Architecture."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": [
+            "The process depends on the goal of the Affinity Diagramming, but essentially these are the main steps:"
+          ],
+          "steps": [
+            "Preparing the data, information that we will work with",
+            "Writing the pieces of data on post-its",
+            "Posting the post-its on a wall or whiteboards",
+            "Organizing the data (new trends and categories can emerge)",
+            "Taking pictures and notes to document",
+            "Summarizing the main findings"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 13,
+      "ux_process_id": 3,
+      "title": "Empathy Map",
+      "copy": {
+        "introduction": [
+          "We use Empathy Maps to synthesize research data in order to better understand your users. Empathy Maps are great for creating personas, identifying users with different mindsets."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Being a collaborative tool, empathy mapping helps our design team to empathize with your users. It allows us to start building the Personas: representations of a group of your users. With Personas in mind, we can ensure that we make each design decision based on the given persona’s mindset."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "Empathy mapping itself does not generate a standalone deliverable. Naturally, we will provide you the documentation or our empathy mapping session, but the true value of this method is that it is a preliminary step of creating some rough Personas (which can we further develop later in the UX process)."
+          ]
+        },
+        "additional_info": [
+          "Sometimes we also organize Empathy Mapping Workshops with the stakeholders to empathize with the users. There are different templates for Empathy Maps, we use the following structure:",
+          [
+            "Four quadrants: See, Think & Feel, Hear, Say & Do",
+            "And two columns below the quadrants: Pains, Gains"
+          ],
+          "Based on the data collected during the UX Research process, we stick post-its with data pieces written on it on the relevant parts of the map."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": ["Usually our process consists of the following steps:"],
+          "steps": [
+            "Preparation phase (template, post-its)",
+            "Completing the Empathy Map",
+            "Discussing the findings",
+            "Documentation",
+            "Summarizing the results",
+            "Identifying what kind of further research needed"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 14,
+      "ux_process_id": 3,
+      "title": "Personas",
+      "copy": {
+        "introduction": [
+          "User Personas are representations of significant groups of your users. Personas are fictional, but we give them characteristics based on real data collected throughout the UX research."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Personas help us to focus on your users' needs during the UX design process: we use them to empathize with your users. For example: how would John, the programmer search for possible gifts on Etsy for his wife? Personas help to validate design decisions, and to accelerate ideation processes."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "Creating Personas is not only useful for the period of a UX design process: you can keep them, and develop them in the future in order to have a mutual understanding of your users in your whole team. We will provide you the detailed persona with recommendations on how can you use them later."
+          ]
+        },
+        "additional_info": [
+          "It is important to keep in mind that Personas are not about demographics: instead, their behavior is the most relevant part of them. There are other points we usually use to shape a Persona, for example:",
+          [
+            "Name, age and a photo to make them more realistic",
+            "Short biography",
+            "Expertise",
+            "Personality",
+            "Context",
+            "Goals and needs",
+            "Challenges or pain points, frustrations",
+            "Technology details (e.g. used products and platforms)",
+            "Quotes (e.g. from User Interviews)"
+          ]
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": ["These are the steps of our user Persona-creation process:"],
+          "steps": [
+            "Finding patterns in the research data",
+            "Discussion with team",
+            "Using different methods to create the personas (e.g. Empathy Maps)",
+            "Documentation",
+            "Familiarizing the personas with you",
+            "Refining them during the UX design process"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 15,
+      "ux_process_id": 3,
+      "title": "Journey Mapping",
+      "copy": {
+        "introduction": [
+          "User Journey Maps (or Experience Maps) are visual representations of your users completing their task inside your website or application. This map shows the key stages of your users’ journey, and also contains information on how they feel and behave during these stages."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "A User Journey Map helps us empathize with your users: it highlights the most important pain points and opportunities. Consequently, it will help us to make design decisions throughout the UX design process."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "While a User Journey Map is a deliverable itself, you will not only get a nice diagram (basically it is an infographic): you will get a detailed analysis of how your users interact with your product or service."
+          ]
+        },
+        "additional_info": [
+          "A User Journey Map is essentially a table with rows and columns. The columns represent the main steps of the process, while the rows are the main points of the analysis, for example:",
+          [
+            "Actions (what is required to get to the next step)",
+            "Thinking (users’ questions that need to be answered)",
+            "Feeling (emotions, happy moments and frustration)",
+            "Opportunities (how could we enhance the current experience)"
+          ],
+          "It should be mentioned that we utilize two kinds of User Journey Maps: the current-state map, which shows how your users’ currently achieve their goals, and the future-state map, where we can capture how would your users encounter with your product or service if we create the map based on the desired experience."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": [
+            "Creating User Personas is an essential preliminary step for our User Journey Mapping process. If we have the Personas and the research data, we complete these phases:"
+          ],
+          "steps": [
+            "Defining the key stages (the columns)",
+            "Determining the touchpoints",
+            "Attaching user goals to each stage",
+            "Filling in the rows based on the research data",
+            "Finding the \"moments of truth\" (where users make important decisions)",
+            "Identifying the opportunities for enhancement",
+            "Documentation of the mapping process",
+            "Creating the deliverable User Journey Map"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 16,
+      "ux_process_id": 3,
+      "title": "Storyboarding",
+      "copy": {
+        "introduction": [
+          "Storyboarding refers to the process of creating a visual representation - a drawing - showing how your user is experiencing the problem space, how she is trying to achieve her goal."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Showing the users in their context helps us to maintain a user-centered mindset: a story not only contains the steps of a process: it can also express feelings, fears, opportunities, decision points and it can result in revealing the causes of these decisions."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "We will not only provide you the storyboards featuring the User Personas as main characters: we always conduct Storyboard Review sessions, which allows us to identify to unrealistic points of the stories, so you will get the results of these sessions as well."
+          ]
+        },
+        "additional_info": [
+          "Stories represented in the storyboards are like real stories: it usually contains these elements: a main character (a Persona), a task to complete (user goal), villains (pain points, frustrations), location (context of use), and other relevant objects, characters. Storyboarding main advantages are the followings:",
+          [
+            "not only will we understand your users better: this tool helps us to communicate to our research findings and results to you,",
+            "it can also catalyze our thinking: seeing the User Personas in their context with all the important factors represented (e.g. obstacles, frustrations, opportunities) helps to go test different solutions, think through various Scenarios,",
+            "Storyboard Reviews allows us to get early and cost-effective feedback during the UX design process."
+          ],
+          "Storyboard Reviews are about showing the Storyboards to your users, and ask them to review the story, and point out the unrealistic moments, suggest addition, and comment on any step they want to."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": ["The steps of our Storyboarding process are:"],
+          "steps": [
+            "Deciding which scenarios will be represented",
+            "Creating the elements of the story",
+            "Writing the script",
+            "Drawing the Storyboards",
+            "Conducting Storyboard Review sessions",
+            "Presenting our findings"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 17,
+      "ux_process_id": 3,
+      "title": "Scenarios",
+      "copy": {
+        "introduction": [
+          "User Scenarios are basically short stories about your users (and their representations, the User Personas) trying to achieve their goals in their context."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "User Scenarios are especially useful for a human-centered design approach: these stories not only help us to craft great user interfaces and design meaningful interactions, this method is also used for Usability Testing."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "As a result of this method, you will have a collection of detailed scenarios for each User Personas. Based on these Scenarios, we will be able to create Storyboards, construct User Flows and identify Product Requirements."
+          ]
+        },
+        "additional_info": [
+          "Creating Scenarios requires a special mindset. It is about focusing on your users' goals: what will they try to accomplish on your website or inside your app? Additionally, it is also important to think about their context, their prior knowledge and background. Thanks to Scenarios, we will be able to determine:",
+          [
+            "the most important points to focus on during the UX design process",
+            "which steps of the process would require additional help to your users",
+            "the main needs and motivations of your users."
+          ],
+          "It needs to be mentioned, that Scenarios are built upon a tool called User Story: these short statements describe what a certain User Persona needs, and why. Scenarios take User Stories to the next level by adding the interaction with your product or service."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": [
+            "At this point of our UX design process, we will have enough data from UX Research to identify Scenarios, these are the steps we usually follow:"
+          ],
+          "steps": [
+            "preliminary step: creating Personas",
+            "writing User Stories the understand the reasons",
+            "contextualizing (adding the environment, other external factors)",
+            "taking into account the specific Persona's mindset",
+            "writing Scenarios for each Persona",
+            "testing the Scenarios"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 18,
+      "ux_process_id": 3,
+      "title": "Use Cases",
+      "copy": {
+        "introduction": [
+          "Use cases describe the sequence of actions your users accomplish while interacting with the interface of your product or service."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Writing a list of all the steps your user takes to reach a certain output helps us to identify the Product Requirements. A use case is all about function: how can your user interact with your system. It answers this question: What behaviors should be implemented into your product or service?"
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "Writing Uses Cases is a time consuming activity, which requires a lot of analysis and writing. However, such documentation can be really useful not only during the UX design process, but also in the development phase: the developers will easily understand what functions should be implemented."
+          ]
+        },
+        "additional_info": [
+          "Ideally, a Use Case documentation contains all the interactions between your user and the system. Consequently, such documentation needs to be iterated throughout the whole UX design process (especially after testing). Usually a Use Case consist of the following parts:",
+          [
+            "Title and short Summary",
+            "Preconditions",
+            "Trigger Event",
+            "The user, who interacts with the system",
+            "The Main Success Scenario (Standard Flow)",
+            "Alternate Flows and Exception Flows"
+          ],
+          "It needs to be highlighted, that next to Use Cases, User Stories and Scenarios should be used in order to ensure a human-centered approach. While Use Cases are more like technical blueprints, User Stories and Scenarios represent the human touch of this phase of the UX design process."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": ["To create a Use Case, we conduct the following steps:"],
+          "steps": [
+            "Determining each task your user wants to accomplish",
+            "Writing down the detailed steps of the standard flow",
+            "Thinking about exceptions and possible failures",
+            "Grouping: what are the common and the edge cases",
+            "Creating the documentation",
+            "Iterating throughout the UX design process"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 19,
+      "ux_process_id": 4,
+      "title": "Product Requirements",
+      "copy": {
+        "introduction": [
+          "The purpose of a Product Requirements Document is to have a documentation of what features should the product or service contain in order to meet your users' needs."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Having a Product Requirements Document ensures a certain level of mutual, shared understanding inside your team. Ideally, this document will serve as a cornerstone for your product development."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "The name of this tool is pretty self-explanatory: you will get a detailed Product Requirements Document, which lists what problems should be solved, what features should be supported by your product or service."
+          ]
+        },
+        "additional_info": [
+          "The Product Requirements Document synthesizes the data we gain from organizing and analyzing the findings of the UX Research. This document bridges the gap in the UX design process between the data analysis and the interface and interaction design phase. Use Cases, User Stories and Scenarios are great inputs for creating a Product Requirements Document. There are different approaches in creating a Product Requirements Document, we include the followings:",
+          [
+            "Target audience (Who will use it)",
+            "Business goals",
+            "Features needed to meet the users' needs (in a prioritized way)",
+            "Content types",
+            "Ideas to consider for future development (optional)",
+            "Inspirations (optional)"
+          ],
+          "In other words, it contains business, functional and user requirements. To get the most out of this tool, a Product Requirements Document should evolve over time, through many iterations."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": ["This is how we create a Product Requirement Document:"],
+          "steps": [
+            "Analyzing the data collected through UX research",
+            "Creating Use Cases, Users Stories and Scenarios",
+            "Summarizing your business goals based on the Stakeholder Interview, workshops and other meetings",
+            "Listing out the key features",
+            "Creating the Product Requirements Document",
+            "Iterating as often as possible in order to maintain its alignment with your actual product or service"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 20,
+      "ux_process_id": 4,
+      "title": "Information Architecture",
+      "copy": {
+        "introduction": [
+          "Information architecture is about making your website or application a place where your users can navigate easily, find what they are looking for."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "In short, creating a well-crafted structure for your website or application helps your users interact with your product or service in a way that promotes great user experiences. It is about crafting understandable online surroundings that supports findability."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "The deliverables related to designing the Information Architecture - among others - include: the Content Inventory, the Sitemap and User Flows. Other possible outcomes are determining how metadata should be used, how to build the tagging system and so on."
+          ]
+        },
+        "additional_info": [
+          "The key idea here is that your users will come to your website or use your application to fulfill a certain need. If they can't find what they are looking for, they will leave. In the offline world, people navigate by signs that give them clues to understand their surroundings. When we open a website or an application, we experience them as places. And we start looking for signs, clues, navigation patterns we got used to.",
+          "That is why you need to care about your website's or application's Information Architecture. There are many elements of the navigation: a logo at the upper-left corner (if you click on it, it takes you back to the homepage - it is a conventional pattern), the main navigation (the main menu), a tag cloud, a search field, list of links e.g. in the footer and so on. To sum up Information Architecture is about how you categorize and organize the information."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": [
+            "Creating the Information Architecture is one of the most important part of the UX design process. It is not a separate activity, more like an ongoing task, which consists of these steps:"
+          ],
+          "steps": [
+            "Taking into account what are your goals",
+            "Analyzing what are the users' needs",
+            "Assessing the Content Inventory or your content strategy",
+            "Testing with different methods (e.g. Card Sorting, Tree Testing)",
+            "Creating the Sitemap, User Flows, a tagging system etc.",
+            "Iterating based on the Usability Testing and other findings"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 21,
+      "ux_process_id": 4,
+      "title": "Interaction Design",
+      "copy": {
+        "introduction": [
+          "Interaction Design is a huge part of the UX design process: it is not one tool or method, it is one of our main focus. We design products and services based on your users' mental models, behavior and expectations."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Well-crafted interactions contribute to a great user experience: when your users interact with your website or application, the process should be intuitive and should make a good impression. Functionality and usability are only the basics, providing more than these will make the difference. When you expect something to work in a certain way, and it really does, it feels good. If we know what are your users' expectations, we can design interfaces that meet these expectations."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "Interaction Design itself is not something that has one or two deliverables: we get to know your users thanks to the UX Research, then we synthesize the data by creating Personas, Journey Maps, Scenarios and so on. As a result, we will be able to design your product or service with your users in mind: the Wireframes and Prototypes will reflect what we have learned, and in the Testing phase, we can check what is working, and what should be improved."
+          ]
+        },
+        "additional_info": [
+          "There are many elements of Interaction Design: it requires a user-centered mindset and also knowing some parts of cognitive psychology (like how mental models work, and what are the affordances). We should take into account how the human mind works, for example:",
+          [
+            "what are the limitations of our visual perception",
+            "how we remember things",
+            "how can we reduce the cognitive load",
+            "how to support the way we consume information (e.g. with progressive disclosure)",
+            "how to manage the user errors",
+            "how can we maintain the users' attention."
+          ],
+          "It is also important to know the most common user interface patterns."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": [
+            "As you can see, Interaction Design is the heart of the UX design process. Our Interaction Design process does not really contains steps, rather phases:"
+          ],
+          "steps": [
+            "UX Research, getting to know your users",
+            "Analyzing the data",
+            "Creating Personas, Journey Maps, Scenarios and so on",
+            "Searching for patterns, Best Practices",
+            "Building Wireframes and Prototypes",
+            "Testing and iterating based on the results"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 22,
+      "ux_process_id": 4,
+      "title": "User Flows",
+      "copy": {
+        "introduction": [
+          "A User Flow is a sequence of steps your user needs to take in order to accomplish a task inside your application or on your website."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Outlining the main user flows for each Persona will enable us to create a smooth user experience. Your users will visit your website or use your app in order to reach their goals. Making the steps of reaching these goals evident and straightforward can considerably improve their experience."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "We will create many iterations of the main User Flows during the UX design process. As we always keep our sketches and low fidelity diagrams for future reference and for documentation purposes, upon request we will provide you all the versions we create along the way."
+          ]
+        },
+        "additional_info": [
+          "We start creating User Flows by thinking about our Personas goals and motivations. Ideally, by conducting User Journey Mapping, Storyboarding and writing Scenarios, we already know at this point what tasks we have to concentrate, what problems should be solved.",
+          "User Flows are made of steps. To design these steps in a user friendly way, we need to have a user-centered mindset, and imagine that the user and your interface is having a conversation.",
+          "To every user-input, the system responds with something. Sketching is a great way of designing User Flows, and we also use a shorthand technique developed by Ryan Singer, which only utilizes texts and connector lines."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": ["We follow these steps:"],
+          "steps": [
+            "Understanding your users' needs",
+            "Listing out the main goals for each Persona",
+            "Identifying Entry Points (where your users come from)",
+            "Determining the Endpoints (when the goal is reached)",
+            "Including the steps (with alternative paths)",
+            "Iterating many times"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 23,
+      "ux_process_id": 4,
+      "title": "Content Design",
+      "copy": {
+        "introduction": [
+          "You can have a logically structured website or application featuring great looking user interfaces, it is worthless without if the content displayed content is irrelevant or does not contain the information your user came for."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Without meaningful, relevant and easily comprehensible content there is no good user experience. Your users will not come to your website or open your application and spend time there without a certain goal to achieve, a need to fulfill. Content design helps us to design your digital product or service with that statement in mind."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "Content design is not an isolated method that has one or two distinct deliverables. We believe in the content-first design approach: it means that throughout the whole UX design process (for example creating Sketches, Wireframes and Prototypes) we use real content instead of placeholder texts and gray boxes."
+          ]
+        },
+        "additional_info": [
+          "Content-first design helps us to think about the real design opportunities and constraints. It also means that we take into account the design implication of different languages, e.g. German words are usually longer than their English translations. When we work with real content in our design plans (whether it is a Sketch, a Wireframe, or a Prototype), we can use different sources: if it is a redesign, we can start with your existing content. We can also come up with our own texts (based on the things we have found out thanks to UX Research and to analyzing the data collected during the Research), and we can also start testing with your competitor's content, just to create valid starting point for test and iteration. So Content Inventory and Competitive Analysis are useful methods to conduct for the purposes of Content design. It needs to be highlighted, however, that we are not native English speaker. We can help with copywriting, but we suggest you to have a professional copywriter as well.",
+          "Carefully planned Information Architecture (how the content is organized), readability (the content should be easy to scan) and accessibility (for example for screen reader users we need to provide alternative texts instead of images) are also important factors for a successful Content design. Emotional design also plays an important role here: the images, videos, animations, illustrations, the tone of voice make an impression, evoke emotions. You also need to think about conversion optimization: the content should contain the most important keywords. As you can see, there are many aspects of Content design, thus it has a huge impact on the UX of your digital product."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": [
+            "There is no exact process of content design, but here is a list of some of the most important parts:"
+          ],
+          "steps": [
+            "Understanding your and your users' goals",
+            "Creating a Content Inventory (in case of a redesign)",
+            "Conducting a Competitive Analysis",
+            "Determining priority content",
+            "Creating Sketches, Wireframes and Prototypes with real content",
+            "Test and iterate in order to fine-tune the content"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 24,
+      "ux_process_id": 4,
+      "title": "Best Practice Research",
+      "copy": {
+        "introduction": [
+          "Best Practice Research means that we explore and collect interaction design and user interface patterns in order to create a starting point for our thinking."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Our collection of Best Practices will only provide a reference point for the initial phases of the UX design process. However, it is useful to know what are the interface patterns that should not be reinvented, for example it would be really surprising if clicking on your logo in the upper left corner of your site would lead to the contact form."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "You will get a detailed documentation of what are the widely used design patterns for the problems you try to address with your product or service. We also point out the solutions that should be avoided. It should be highlighted, that it is not about listing out the current design trends. We will do the research with your target audience in mind."
+          ]
+        },
+        "additional_info": [
+          "While there are certainly no definitive ways of doing things that will work for every target audience, there are some guidelines, patterns which can be used as a starting point for testing assumptions. There is an important thing we need to mention: the Best Practice Research does not mean that we collect the ideas, and then you can just safely use someone else’s solutions.",
+          "You have unique goals and context, and so do you users. That is why we start the process with a Stakeholder Interview, where we discuss these goals. Then we determine what are the problems we would like to address, what is the scope of the search. As the next step, we collect solutions, and attach our recommendations (pointing out the caveats as well)."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": [
+            "These are the steps of our Best Practice Research process:"
+          ],
+          "steps": [
+            "Understanding your and your users' goals",
+            "Determining the scope",
+            "Searching for patterns, best practices",
+            "Collecting patterns that should be used",
+            "Determining solutions that should be avoided",
+            "Creating a summary of the findings"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 25,
+      "ux_process_id": 4,
+      "title": "Sketching",
+      "copy": {
+        "introduction": [
+          "The word \"sketching\" refers to the activity of creating quick, rough drawing. Quick and rough: these are only two of the reasons while we sketch during our UX design process."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "We use sketching in different parts of our UX design process: it is great for generating ideas in a brainstorming session, it is also good for exploring different interactions and UI solutions. Sketching is also a powerful tool for teamwork, it helps to express our thoughts, and facilitates a shared understanding."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "Every UX design process is different, so at this point we can't tell exactly what kind of deliverables will you get thanks to sketching. For example it is very likely that you will get highly detailed user interface sketch of the key screens of your website or applications, including explanatory annotations."
+          ]
+        },
+        "additional_info": [
+          "During an ideal UX design process, we conduct UX research and as a result, we end up with a lot of data. To organize and synthesize this data, we can for example create and sketch Empathy Maps, Personas and User Journey Maps. To better understand our users, we also draw Storyboards.",
+          "We can use our visual notes as memory triggers, for example during a Contextual Inquiry or User Interview, we can use visual elements in our notes. Next to these, we sketch user interfaces before we go digital and create Wireframes and Prototypes on our computer. Userflows can also be presented as sequences of user interface sketches."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": [
+            "The exact process depends on of course what method we are utilizing our sketching skills for. For example these are the steps of sketching user interfaces:"
+          ],
+          "steps": [
+            "We decide our scope: exploratory sketch, or polishing a solution?",
+            "If it is for idea generation, the goal is to create many rough sketches quickly",
+            "If the goal is to refine a solution, we create detailed sketches",
+            "We discuss our sketches with each other, then iterate",
+            "In some cases, we present our sketches to you",
+            "We create documentation for future reference"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 26,
+      "ux_process_id": 4,
+      "title": "Wireframing",
+      "copy": {
+        "introduction": [
+          "A Wireframe is a visual representation of how a screen on your website or inside your application will be structured. Depending on the chosen detail-level, it can contain the description of the functions and interactions, and also the main contents. However, it is not about visual design, it does not show how will your interface look like."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Creating Wireframes enables us to discover different user interface design solutions in a fast and cost-effective way: we generate ideas multiple, get feedback, and iterate based on these."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "A Wireframe can be created by Sketching, and also by going digital, and using a software like Axure, UX Pin or Sketch App. We will provide you the detailed and polished high-fidelity wireframes."
+          ]
+        },
+        "additional_info": [
+          "The main difference between a Prototype and a Wireframe is that a Prototype is more interactive. It's purpose is to simulate the interaction between the user and your website or application.",
+          "The goal of Wireframing is to:",
+          [
+            "design the layout, structure of the key interfaces,",
+            "identify the different functionalities",
+            "determine what information should be presented and where."
+          ],
+          "A Wireframe does not contain visual design elements, like color, imagery or specific typography. However, it shows the visual hierarchy of the content and different sections. We mainly use wireframes for planning, while a Prototype is created mainly for testing purposes."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": [
+            "The steps of our Wireframing process depends on a lot of factors, but these general points always apply:"
+          ],
+          "steps": [
+            "Understanding your and your users' goals",
+            "Using the Sitemap, the User Flows, the Storyboards and other outputs",
+            "Sketching user interface solutions",
+            "Exploring and discussing many ideas",
+            "Creating the polished Wireframes",
+            "Iterating based on the feedback"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 27,
+      "ux_process_id": 4,
+      "title": "Prototyping",
+      "copy": {
+        "introduction": [
+          "We create Prototypes to simulate and test how your final product or service will interact with your users."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Thanks to Prototyping, we can try out different solutions, test and validate our ideas. It means that we can make sure that the functionality is working the way we intended before the implementation of the final version."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "You will get a cost-efficient tool: Prototyping is a lot cheaper than testing the final product, and making modifications after the development phase. We will provide you the Prototypes, so you will see how your product evolves."
+          ]
+        },
+        "additional_info": [
+          "While there are many forms of a Prototype (the detail-level can vary from low to high fidelity), (it can be created on paper by Sketching or using a digital tool), it is important to note, that the main goal is to answer these question: How will your user interact with this system? So it is not about the structure, or what information is presented and where (it is the Wireframes' job), it is all about how it is going to be used.",
+          "We use Prototypes during Usability Testing, so we can easily iterate based on the test results."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": [
+            "The process depends on the medium we use (paper or digital), on the detail level, and also on the scope (for example our goal is to test the main navigation in the beginning of the UX design process, or we want to get an overall feedback at the end of the process). These steps are always included:"
+          ],
+          "steps": [
+            "Understanding your and your users' goals",
+            "Using the outputs of Sketching and Wireframing",
+            "Creating the Prototype",
+            "Conducting tests (the type depends on the scope)",
+            "Iterating based on the feedback",
+            "Testing again"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 28,
+      "ux_process_id": 5,
+      "title": "Card Sorting",
+      "copy": {
+        "introduction": [
+          "The main goal of Card Sorting is to improve your website's or application's Information Architecture, to help designing how the information is organized and labelled."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Findability is a very important factor of a great user experience. It means that users who are already using your product or service will find the information or functionality they expect to be there. Card Sorting also helps to improve discoverability, which describes how easy it is to find content or functions your users have not expected to find there."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "Card Sorting is a great way to get feedback from your users: if we involve them in the process of planning and designing the Information Architecture, the final product will match their mental model better. Organizing a Card Sorting test is cost-efficient and quick method, which provides actionable results for creating the structure of your site or application."
+          ]
+        },
+        "additional_info": [
+          "The process of Card Sorting is very straightforward: we give the participants already written cards (each contains an information type or a function). Then we ask them to group those cards. Card Sorting can be conducted in two different ways:",
+          [
+            "Closed Card Sorting means that we determine the main categories before the test, and the participants have to assign the cards to those predefined groups.",
+            "Open Card Sorting gives more freedom to the participant: they can not only group the cards, but they can create and name the categories."
+          ],
+          "Card Sorting also shows if there are any significant differences in the mental model of the user segments. Next to Card Sorting, we like to conduct a Tree Testing as well."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": ["These are the steps of our Card Sorting process:"],
+          "steps": [
+            "Defining the scope",
+            "Defining the framework (e.g. open or closed)",
+            "Creating the cards",
+            "Collecting Participants",
+            "Analyzing the results",
+            "Summarizing the findings"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 29,
+      "ux_process_id": 5,
+      "title": "Tree Testing",
+      "copy": {
+        "introduction": [
+          "We conduct a Tree Testing in order to assess the findability on your website or inside your application."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Just like Card Sorting, Tree Testing helps us to create the Information Architecture, which supports findability and discoverability (both attributes is about finding information). It can improve the way the information is organized and labelled."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "Tree Testing offers the same as Card Sorting: the user involvement enables us to design your product or service in a way that match your users' mental model. It is a cost-efficient, quick test, which shows what areas should be modified."
+          ]
+        },
+        "additional_info": [
+          "During a Tree Testing, participants get different tasks to solve. We write scenarios, which could easily happen in the real life. We ask them to find a certain information, but we put it into perspective, like: \"You are planning to visit your aunt, who lives in a different continent, and your passport has expired. Where would you look to find information about getting a new passport?\". Participants can click through a predefined tree, so we can test the structure and the naming."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": ["These are the steps of our Tree Testing process:"],
+          "steps": [
+            "Setting the framework (e.g. writing instructions)",
+            "Creating the Tree",
+            "Writing and selecting scenarios",
+            "Recruiting Participants",
+            "Analyzing the results",
+            "Summarizing the findings"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 30,
+      "ux_process_id": 5,
+      "title": "Usability Testing",
+      "copy": {
+        "introduction": [
+          "Usability Testing means that we ask someone who represents your target audience to complete a set of predefined tasks. We also ask them to think-out-loud, tell everything that comes to their minds in connection with the task they are completing."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Thanks to Usability Testing, we can get instant feedback from your users. We can find out what are the problematic points, and after the tests, we can focus on these issues to make your product of service better."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "We record each session with a screen capture tool. Next to these recordings, we will provide you the transcript of what your users said during the session. Plus, we will summarize our findings in a detailed document."
+          ]
+        },
+        "additional_info": [
+          "Usability Testing reveals how smooth is the process of completing the tasks for the participants on your website or inside your application (or using the Prototype of these). During our UX Research and Design process, we use a small sample test: we test with only 3 participants/Persona. Interestingly, with three users almost 75% of the problems can be identified, so adding more participants makes the process less and less effective. It needs to be mentioned a UX Process should be iterative, thus we recommend conducting multiple rounds of Usability Testing."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": [
+            "The exact process depends on whether we utilize Usability Testing during a redesign or a design project, but these steps are always included:"
+          ],
+          "steps": [
+            "Understanding your and your users' goals",
+            "Determining the scope",
+            "Preparing the tasks",
+            "Recruiting participants",
+            "Conducting the tests",
+            "Summarizing the finding"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 31,
+      "ux_process_id": 5,
+      "title": "A/B Testing",
+      "copy": {
+        "introduction": [
+          "To put it simply, A/B Testing means that two variants of the user interface is shown on your website or inside your app, and it is random which version a user meets. At the end of the test session, we can determine which solution was more effective compared to the other one."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "The results of A/B Testing are not assumptions: you will get measured changes. While A/B Testing a part of your website or application won't increase the number of users visiting them, but it can help you make more out of your existing traffic."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "If it was prepared well and ran correctly, A/B Testing is a powerful optimization tool. The little details on the user interface of your product or service can matter a lot. Next to the test results, you will get improved UX, and increased conversion rates."
+          ]
+        },
+        "additional_info": [
+          "While this method sounds really easy to conduct, actually there are many things that can go wrong during an A/B Testing process. To run a proper A/B Test, we need for example:",
+          [
+            "hypothesis to test",
+            "big enough sample size",
+            "to run the test for full weeks",
+            "a version identical with the original in order to see the noise (noise here means that if you have two identical UI solutions, and you split the users into two groups, you will still get some differences because of random factors)."
+          ]
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": ["Our A/B Testing process consists of the following steps:"],
+          "steps": [
+            "Looking at the Analytics and other usage data",
+            "Constructing Hypothesis",
+            "Creating a variation pers hypothesis",
+            "Running the A/B Test",
+            "Analyzing the test results",
+            "Constructing more tests"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 32,
+      "ux_process_id": 5,
+      "title": "Remote Testing",
+      "copy": {
+        "introduction": [
+          "While there are various testing methods that can be done remotely, we use the term \"Remote Testing\" for a Usability Testing conducted with the participation of users who – instead of sitting next to us – stay at their location, and we use a screen-sharing program to see how they are interacting with your product or service."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "A Remote Usability Testing has almost all the same benefits as a Usability Testing. While there can be some challenges (we can't see the participant's body language so well, there can be technological issues), it offers some advantages compared to the in person Usability Testing: it can be cheaper, you can test users living in another continent."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "The deliverables of this method are not different from the ones we provide at the end of a Usability Testing round: we will provide you the recordings, transcripts, so everything we capture during the remote sessions. Next to these, you will get our summarized findings and the list of recommendations on what should be changed."
+          ]
+        },
+        "additional_info": [
+          "Preparing Remote Usability Tests is a little bit different from the preparation of an in-person test: we check if the participant has everything needed for the test on her or his end: like proper computer, noiseless environment, screen sharing possibilities and so on. We also need to send them explanatory texts before the test, so the session itself will be smoother."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": [
+            "The process of conducting a Remote Usability Test is almost the same as the one we described for Usability Testing:"
+          ],
+          "steps": [
+            "Understanding your and your users' goals",
+            "Determining the scope",
+            "Preparing the tasks, explanatory texts",
+            "Recruiting participants",
+            "Conducting the tests",
+            "Summarizing the finding"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 33,
+      "ux_process_id": 5,
+      "title": "First-click Testing",
+      "copy": {
+        "introduction": [
+          "The idea of First-click Testing is pretty simple: we ask your users what would be their first click in a certain scenario on your website or inside your application."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Studies showed that the first-click made by a user in order to complete a given task indicates the chances for the successful completion: a study revealed that if the first click was correct, the chances were 87%, while in case of an incorrect first step 46%."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "Next to the test results and our summarized findings, you will get – as a result of modification made by the series of First-click Testing – a digital product or service, which is designed in a way that users can easily find things they are looking for."
+          ]
+        },
+        "additional_info": [
+          "The ultimate goal of the First-click Testing is to find out what the users would do as a first step on your website or inside your application. First-click Testing enables us to:",
+          [
+            "design a straightforward Information Architecture,",
+            "write the content and the labels with your users in mind,",
+            "organize the user interface elements in way that supports your users reaching their goals."
+          ],
+          "Preparation is one of the most important part of the whole process: first we select the part of your website or application we want to test. It is also possible to test a Wireframe or a Prototype, because we only need a screenshot. Then we write the tasks to complete: we imagine a certain goal from the users' perspective. After the test, we analyze the results. It should be highlighted that next to knowing how many users clicked on the correct element, it is also very useful to know where did they clicked instead. Another important factor here is the time they needed to choose something to click on."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": ["The steps of First-click Testing are the followings:"],
+          "steps": [
+            "Deciding what should be tested",
+            "Writing tasks to complete",
+            "Recruiting users",
+            "Analyzing the test results",
+            "Summarizing the findings",
+            "Conducting a new round based on the results of the previous one"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 34,
+      "ux_process_id": 5,
+      "title": "Fake Door Testing",
+      "copy": {
+        "introduction": [
+          "Thanks to Fake Door Testing, we can validate a product idea without actually implementing it, so it can save a lot of money, and make the process of improving your product or service more efficient."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Fake Door Testing is a great way to find out whether a new product or feature would be interesting for your target audience without spending much time and money on developing it."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "We will provide you the design of the landing page (or UI elements) featuring this new product or feature idea, and we will also give you a summary of our findings after the test period."
+          ]
+        },
+        "additional_info": [
+          "Fake Door Testing means that we show your user an option that is not actually exists. After the user clicks or registers (or takes another action), the system replies that this feature or product is not yet ready. By measuring how many of your visitors have clicked (or registered), we can tell whether the feature or the product will be used by your users or not.",
+          "It needs to be mentioned that Fake Door Testing only works if you already have a website or an application, and you also have some traffic on it. On the landing page created for the new feature or product, we can ask your user to provide an email address, so you can notify your users of the launch of the new addition. Consequently, if you decide to implement the new feature, or launch the new product, you will already have a database of users who are interested in it."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": [
+            "The process of Fake Door Testing is pretty straightforward:"
+          ],
+          "steps": [
+            "Learning about your business goals",
+            "Determining the new feature or product idea",
+            "Creating a landing page or UI elements",
+            "Launching the test",
+            "Analyzing the data",
+            "Summarizing the findings"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 35,
+      "ux_process_id": 6,
+      "title": "UI Design",
+      "copy": {
+        "introduction": [
+          "The term \"UI Design\" stands for User Interface Design, and it is about designing the look and feel of your digital product, adding a visual layer to the things we have designed throughout the UX design process."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "A good-looking user interface is responsible for building trust in your target audience. Aesthetics are essential to create a positive first impression, and to establish credibility. The UI design also plays an important role in expressing your brand."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "While we are mainly a UX design consultancy, one of our additional strength it that we are not only here to improve the user experience of your product or service, we can also produce user interfaces which are beautiful to look at."
+          ]
+        },
+        "additional_info": [
+          "It should be highlighted, that good UX and good UI go hand in hand. You can have for example a well-designed Information Architecture, a well-tested Prototype, and you can also know your users well thanks to an extensive UX Research, if the user interface of your product or service looks unprofessional or outdated, it can undermine the success of your project. And it is not only about being good-looking: it should follow conventions, be consistent, let the users do what they came for and so on."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": [
+            "Adding the visuals, the look and feel is the last layer: after understanding your and your users' goals, crafting the Interactions, building the Information Architecture, creating Sketches, Wireframes and low fidelity Prototypes, based on the Moodboards we create the UI design, so roughly these are the steps of the process (naturally, due to the iterative nature of our UX design process, some parts of it will happen after creating the UI elements, so the sequence of the following steps can vary):"
+          ],
+          "steps": [
+            "Stakeholder Interview and other meetings with you",
+            "Starting the Moodboarding",
+            "Conducting other parts of the UX Research and Design process",
+            "Presenting the Moodboards to you",
+            "Choosing the style",
+            "Creating the UI Design elements"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 36,
+      "ux_process_id": 6,
+      "title": "Mood Boarding",
+      "copy": {
+        "introduction": [
+          "Essentially, moodboards are collections of visual inspirations showcasing what is our idea about the style of your interfaces."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Moodboards enable us to communicate the proposed look and feel of your digital product. After the Stakeholder Interview with you, we start gathering ideas, inspirations in order to establish a proposed aesthetic."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "Based on the brand and communication guidelines, your target audience, the values you would like to represent and so on, we create Moodboards, from which you can choose the one that resonates with you the most."
+          ]
+        },
+        "additional_info": [
+          "Mood Boards are great way to communicate the following elements:",
+          [
+            "overall style, mood and personality",
+            "color palettes",
+            "Typography",
+            "photography / illustration / icon style"
+          ],
+          "It is important to highlight that Moodboarding is not about designing the Content, the organization of the user interface elements (it is not part of creating the Information Architecture), and it does not contain Interaction Design proposals. Based on the Moodboard you selected, we can start working on the look and feel of your user interfaces."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": ["We follow these steps:"],
+          "steps": [
+            "Having a Stakeholder Interview and other meetings",
+            "Understanding the values and personality you want to communicate",
+            "Gathering visual inspirations",
+            "Creating Moodboards",
+            "Presenting the Moodboards to you",
+            "Start working on the UI Design"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 37,
+      "ux_process_id": 6,
+      "title": "Style Guide",
+      "copy": {
+        "introduction": [
+          "The term \"Style guide\" can mean quite different things. What we call Style guide is essentially a document that contains visual guidelines for your digital product."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Style guides help you to maintain the consistency of your digital product: even if more people work on it, or it gets modified it in the future."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "We will provide you a detailed document containing the most important aspects of using your product's or service's visual elements."
+          ]
+        },
+        "additional_info": [
+          "Style guides can have different parts based on the different interpretations of this term. Some Style guides for example contain Tone of Voice guidelines as well, which describes what and how should someone communicate with the users in given situations (Mailchimp's Voice & Tone Document is a great example).",
+          "However, we don't offer this service. Typically, our Style guides contain the following elements:",
+          [
+            "How the logo should be used (sizes, colors, placement, spacing, variations)",
+            "Typography (sizes, colors, typefaces for different UI elements)",
+            "How to organize content (e.g. lists, tables, layout guidelines)",
+            "Imagery, icons, illustrations (what should be used and how)"
+          ],
+          "We believe that next to a Style guide, a UI Kit should also be utilized, these two create a powerful combination. It should be mentioned that we only provide services for your digital projects, so our Style guides don't contain guidelines for print."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": [
+            "To create a Style guide, we need to know what should be the overall look and feel of your digital product, and understand your and your target audience's goals, then we follow this process:"
+          ],
+          "steps": [
+            "Collecting inspirations",
+            "Discussing what should be included with you",
+            "Creating the detailed document"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 38,
+      "ux_process_id": 6,
+      "title": "UI Kit",
+      "copy": {
+        "introduction": [
+          "A UI Kit (or pattern library) is like a box of LEGO customized for your website or application: it contains reusable user interface elements, so you can easily extend or modify your existing interfaces in the future."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Consistency is a very important factor a good user experience. The elements of a user interface should work in a learnable, predictable way: for example if a green rectangle works as a button on the Homepage, the exact same rectangle should not serve as an illustration on the About us page."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "You will get a set of reusable UI elements, which can be quickly integrated into your existing design. Thanks the UI Kit, the look and feel of the UI parts will be consistent, every little chunk will fit in the overall look, even if it was added later. You will be able to use these parts for Prototyping as well."
+          ]
+        },
+        "additional_info": [
+          "Our UI Kit service includes creating a UI Kit which represents your brand, style and values. Naturally, you can utilize premade UI Kit, but we won't recommend that. So next to having all the benefits of UI Kits available for purchase (or downloadable for free), we offer customization and personalization as well. You will get many color variations of the following UI elements:",
+          [
+            "Navigation: menus, buttons, tags, breadcrumb, pagination and so on",
+            "Form controls: like text fields, radio buttons, dropdowns and checkboxes",
+            "Elements for displaying the content (e.g. lists, tables, accordions, sliders)",
+            "Other elements: tooltips, alerts, labels, progress bars etc."
+          ],
+          "We believe that next to a UI Kit, a Style guide should also be utilized, these two create a powerful combination."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": [
+            "First, we need to establish the overall look and feel of your digital product or service, then we follow these steps:"
+          ],
+          "steps": [
+            "Discussing what kind of elements will you need",
+            "Creating the UI Kit",
+            "Writing a \"How to use\" document for you"
+          ],
+          "summary": []
+        }
+      }
+    },
+    {
+      "id": 39,
+      "ux_process_id": 6,
+      "title": "Responsive Design",
+      "copy": {
+        "introduction": [
+          "Responsive design means that the interface of your digital product or service will look good and will be usable at any screen size (mobile phone, tablet, desktop)."
+        ],
+        "helps_how": {
+          "title": "How does it help?",
+          "copy": [
+            "Several years ago Responsive design was a new emerging trend, nowadays it is a must, a norm. A big percentage of Internet traffic coming from mobile devices, and Google Search also takes into account the mobile-friendliness when ranking your website."
+          ]
+        },
+        "you_get": {
+          "title": "What will you get?",
+          "copy": [
+            "We will make sure that your website or web application will look great on all devices. By understanding your users' context and problems (thanks to UX Research), we will be able to design for all the most important Scenarios for each Personas."
+          ]
+        },
+        "additional_info": [
+          "Responsive design is a digital solution that responds to the user's context and behavior by taking into account the different viewports. During Sketching, Wireframing and Prototyping, we always keep in mind that concept, design for the widely used screen sizes. In most cases, we follow the mobile first approach, which is a quite self-explanatory term: we start off by designing for mobile phone, and later convert the designs for tablet and desktop sizes.",
+          "This approach let us focus on the most important elements, and results in a cleaner, streamlined design. It should be mentioned, that in some cases, there is no need for mobile versions, for example an architecture software or a complex accounting program is probably intended for desktop usage."
+        ],
+        "the_process": {
+          "title": "What is the process?",
+          "copy": [
+            "Responsive design is not an isolated method, instead, it is an underlying approach, so it is related to all areas of our UX design process, so the process is something like this:"
+          ],
+          "steps": [
+            "Understanding your and your users' goals",
+            "Identifying Product Requirements",
+            "Determining priority Content",
+            "Planning the Information Architecture",
+            "Designing Interactions, User flows",
+            "Sketching, Wireframing and Prototyping",
+            "Conducting a lot of tests and iterating",
+            "Creating the Visual Layer on the top"
+          ],
+          "summary": []
+        }
+      }
+    }
+  ]
+}

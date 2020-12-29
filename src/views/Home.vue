@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <button @click="handleGet()">asda</button>
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>

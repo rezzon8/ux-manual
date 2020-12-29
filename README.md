@@ -1,4 +1,5 @@
 # ux-manual
+A reference aand resource for UX tasks
 
 ## Project setup
 ```

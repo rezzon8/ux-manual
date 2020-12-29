@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import axios from "axios";
 
 Vue.use(Vuex);
 
@@ -7,7 +8,9 @@ export default new Vuex.Store({
   state: {
     is_data_loaded: false,
     is_data_processing: false,
-    has_data_load_error: false
+    has_data_load_error: false,
+    ux_processes: [],
+    process_steps: []
   },
   getters: {
     get_data_load_state: state => {
@@ -23,22 +26,31 @@ export default new Vuex.Store({
     },
     SET_DATA_LOAD_ERROR(state, val) {
       state.has_data_load_error = val;
+    },
+    SET_PROCESS_STEPS(state, val) {
+      Vue.set(state.process_steps, state.process_steps.length, val);
+    },
+    SET_UX_PROCESSES(state, val) {
+      Vue.set(state.process_steps, state.process_steps.length, val);
     }
   },
   actions: {
     GET_DATA({ commit, state }) {
-      if (state.is_data_loaded) return;
+      // if (state.is_data_loaded) return;
       //
       state.is_data_processing = true;
-      let url = `/reportapi/`;
+      let url = `ux_processes.jsons`;
       //
       return new Promise((resolve, reject) => {
-        this.$http
+        axios
           .get(url)
           .then(response => {
             //
-            response.data["domains"].forEach(domain => {
-              commit("SET_DOMAIN", domain);
+            response.data["ux_processes"].forEach(domain => {
+              commit("SET_UX_PROCESSES", domain);
+            });
+            response.data["process_steps"].forEach(domain => {
+              commit("SET_PROCESS_STEPS", domain);
             });
             commit("SET_DATA_PROCESSING", false);
             commit("SET_DATA_LOAD_STATE", true);
