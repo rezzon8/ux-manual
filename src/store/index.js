@@ -17,6 +17,12 @@ export default new Vuex.Store({
   mutations: {
     SET_DATA_LOAD_STATE(state, val) {
       state.is_data_loaded = val;
+    },
+    SET_DATA_PROCESSING(state, val) {
+      state.is_data_processing = val;
+    },
+    SET_DATA_LOAD_ERROR(state, val) {
+      state.has_data_load_error = val;
     }
   },
   actions: {
@@ -31,10 +37,6 @@ export default new Vuex.Store({
           .get(url)
           .then(response => {
             commit("SET_DATA_LOAD_STATE", true);
-            commit(
-              "SET_USER_CAN_NAVIGATE_REPORT",
-              response.data["user_can_navigate_report"]
-            );
             //
             response.data["domains"].forEach(domain => {
               commit("SET_DOMAIN", domain);
@@ -45,14 +47,13 @@ export default new Vuex.Store({
             response.data["indicators"].forEach(indicator => {
               commit("SET_INDICATOR", indicator);
             });
-            state.is_data_loaded = true;
-            state.is_data_processing = false;
-            state.has_data_load_error = false;
+            commit("SET_DATA_PROCESSING", false);
+            commit("SET_DATA_LOAD_STATE", true);
             resolve();
           })
           .catch(error => {
-            state.is_data_processing = false;
-            state.has_data_load_error = true;
+            commit("SET_DATA_PROCESSING", false);
+            commit("SET_DATA_LOAD_ERROR", false);
             reject(error);
           });
       });
