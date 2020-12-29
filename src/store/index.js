@@ -36,16 +36,9 @@ export default new Vuex.Store({
         this.$http
           .get(url)
           .then(response => {
-            commit("SET_DATA_LOAD_STATE", true);
             //
             response.data["domains"].forEach(domain => {
               commit("SET_DOMAIN", domain);
-            });
-            response.data["topics"].forEach(topic => {
-              commit("SET_TOPIC", topic);
-            });
-            response.data["indicators"].forEach(indicator => {
-              commit("SET_INDICATOR", indicator);
             });
             commit("SET_DATA_PROCESSING", false);
             commit("SET_DATA_LOAD_STATE", true);
