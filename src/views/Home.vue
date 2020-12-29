@@ -9,15 +9,10 @@
 import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
-  name: "Home",
+  name: "UX_manual",
   components: {
     HelloWorld
   },
-  methods: {
-    handleGet() {
-      this.$http.get("https://www.reddit.com/r/all/top.json?limit=30&count=30");
-      console.log("asdd");
-    }
-  }
+  methods: {}
 };
 </script>

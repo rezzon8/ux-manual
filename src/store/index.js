@@ -39,7 +39,7 @@ export default new Vuex.Store({
       // if (state.is_data_loaded) return;
       //
       state.is_data_processing = true;
-      let url = `ux_processes.jsons`;
+      let url = `ux_processes.json`;
       //
       return new Promise((resolve, reject) => {
         axios
