@@ -15,6 +15,9 @@ export default new Vuex.Store({
   getters: {
     get_data_load_state: state => {
       return state.is_data_loaded;
+    },
+    getUXProcesses: state => {
+      return state.ux_processes;
     }
   },
   mutations: {
@@ -31,14 +34,16 @@ export default new Vuex.Store({
       Vue.set(state.process_steps, state.process_steps.length, val);
     },
     SET_UX_PROCESSES(state, val) {
-      Vue.set(state.process_steps, state.process_steps.length, val);
+      Vue.set(state.ux_processes, state.ux_processes.length, val);
     }
   },
   actions: {
     GET_DATA({ commit, state }) {
-      // if (state.is_data_loaded) return;
       //
       state.is_data_processing = true;
+      // reset data
+      state.ux_processes = [];
+      state.process_steps = [];
       let url = `ux_processes.json`;
       //
       return new Promise((resolve, reject) => {
@@ -46,11 +51,11 @@ export default new Vuex.Store({
           .get(url)
           .then(response => {
             //
-            response.data["ux_processes"].forEach(domain => {
-              commit("SET_UX_PROCESSES", domain);
+            response.data["ux_processes"].forEach(item => {
+              commit("SET_UX_PROCESSES", item);
             });
-            response.data["process_steps"].forEach(domain => {
-              commit("SET_PROCESS_STEPS", domain);
+            response.data["process_steps"].forEach(item => {
+              commit("SET_PROCESS_STEPS", item);
             });
             commit("SET_DATA_PROCESSING", false);
             commit("SET_DATA_LOAD_STATE", true);
