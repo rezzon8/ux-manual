@@ -30,7 +30,10 @@
       </v-list>
     </v-navigation-drawer> -->
     <v-app-bar app color="primary" class="elevation-8">
-      <v-toolbar-title>The UX Manual</v-toolbar-title>
+      <v-icon>mdi-book-open-page-variant</v-icon>
+      <v-toolbar-title class="ml-3">
+        The UX Manual
+      </v-toolbar-title>
 
       <!-- <v-btn
         href="https://github.com/vuetifyjs/vuetify/releases/latest"
