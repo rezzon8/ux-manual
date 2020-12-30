@@ -3,6 +3,7 @@
     <v-row>
       <v-col cols="12">
         <h4 class="display-1">{{ title }}</h4>
+        <h4 class="subtitle-1">{{ copy }}</h4>
       </v-col>
       <v-col
         v-for="item in process_steps"
@@ -17,14 +18,17 @@
           :key="index"
           class="d-flex align-start flex-column"
         >
-          <v-card-title class="primary mb-2" style="width: 100%">
+          <v-card-title
+            class="mb-2"
+            style="width: 100%;"
+            :style="{ backgroundColor: color }">
             {{ item.title }}
           </v-card-title>
           <v-card-text>
             {{ copy }}
           </v-card-text>
           <v-card-actions class="mt-auto align-self-end">
-            <v-btn outlined depressed color="primary white--text">
+            <v-btn :style="{ backgroundColor: color }" class="white--text">
               View
             </v-btn>
           </v-card-actions>
@@ -40,7 +44,9 @@ export default {
 
   props: {
     process_steps: Array,
-    title: String
+    title: String,
+    copy: String,
+    color: String
   },
 
   data: () => ({}),

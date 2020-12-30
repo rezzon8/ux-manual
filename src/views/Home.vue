@@ -18,9 +18,11 @@
           v-for="item in $store.getters.getUXProcesses"
           :key="item.id"
           :title="item.title"
+          :copy="item.copy"
+          :color="item.color"
           :process_steps="$store.getters.getProcessSteps(item.id)"
         />
-        <Dialog></Dialog>
+        <Dialog :dialog="displayDialog"></Dialog>
       </v-col>
     </v-row>
   </v-container>
@@ -40,6 +42,9 @@ export default {
   computed: {
     isDataLoaded() {
       return this.$store.state.is_data_loaded;
+    },
+    displayDialog() {
+      return true;
     }
   },
   beforeCreate() {

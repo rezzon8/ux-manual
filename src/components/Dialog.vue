@@ -20,7 +20,7 @@
 
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="primary" @click="dialog = false">
+          <v-btn color="primary" @click="dialog = !dialog">
             Close
           </v-btn>
         </v-card-actions>
@@ -31,10 +31,11 @@
 
 <script>
 export default {
-  data() {
-    return {
-      dialog: true
-    };
+  props: {
+    dialog: {
+      type: Boolean,
+      required: true
+    }
   }
 };
 </script>

@@ -6,7 +6,7 @@
       "icon": "looks_one",
       "copy": "After a kickoff meeting about your goals and mission, we conduct a UX review of your current status. As a result, you get an analysis stating the opportunities to develop. We offer UX Audit as an independent service as well.",
       "href": "ux_audit",
-      "color": "#49c5ae",
+      "color": "indigo",
       "image": "https://cdn.vuetifyjs.com/images/cards/desert.jpg"
     },
     {
