@@ -1,16 +1,34 @@
 <template>
   <v-container>
     <v-row>
+      <v-col cols="12">
+        <h4 class="display-1">{{ title }}</h4>
+      </v-col>
       <v-col
-        v-for="item in $store.getters.getUXProcesses"
+        v-for="item in process_steps"
         :key="item.id"
         :href="item.href"
-        class="mb-5"
-        cols="12"
+        class="mb-5 d-flex align-stretch"
+        cols="4"
       >
-        <h2 class="headline font-weight-bold">
-          {{ item.title }}
-        </h2>
+        <v-card
+          outlined
+          v-for="(copy, index) in item.copy.introduction"
+          :key="index"
+          class="d-flex align-start flex-column"
+        >
+          <v-card-title>
+            {{ item.title }}
+          </v-card-title>
+          <v-card-text>
+            {{ copy }}
+          </v-card-text>
+          <v-card-actions class="mt-auto align-self-end">
+            <v-btn outlined depressed color="primary">
+              View
+            </v-btn>
+          </v-card-actions>
+        </v-card>
       </v-col>
     </v-row>
   </v-container>
@@ -21,24 +39,11 @@ export default {
   name: "UXProcessSection",
 
   props: {
-    msg: String
+    process_steps: Array,
+    title: String
   },
 
   data: () => ({}),
-  computed: {
-    isDataLoaded() {
-      return this.$store.state.is_data_loaded;
-    }
-  },
-  beforeCreate() {
-    this.$store
-      .dispatch("GET_DATA")
-      .then(() => {
-        console.log("asdas");
-      })
-      .catch(e => {
-        console.log(e.message, "oopp");
-      });
-  }
+  computed: {}
 };
 </script>

@@ -27,10 +27,14 @@
       </v-list>
     </v-navigation-drawer> -->
     <v-app-bar app color="primary" dark elevation="0">
-      <v-icon @click="loadData()">
-        mdi-menu
-      </v-icon>
-
+      <v-toolbar-title>The UX Manual</v-toolbar-title>
+      <v-progress-linear
+        :active="$store.state.is_data_processing"
+        :indeterminate="$store.state.is_data_processing"
+        absolute
+        bottom
+        color="white accent-4"
+      ></v-progress-linear>
       <v-spacer></v-spacer>
 
       <!-- <v-btn
@@ -70,7 +74,7 @@ export default {
           console.log("asdas");
         })
         .catch(e => {
-          console.log(e.message, "oopp");
+          console.log(e.message);
         });
     }
   }

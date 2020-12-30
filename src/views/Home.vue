@@ -7,14 +7,19 @@
         </h1>
 
         <p class="subheading font-weight-regular">
-          A reference and resouce for the processes <br />of which UX strategy
-          is comprised
+          A reference and resouce for the processes <br />
+          of which UX strategy is comprised
         </p>
       </v-col>
     </v-row>
     <v-row>
       <v-col>
-        <UXProcessSection msg="Welcome to Your Vue.js App" />
+        <UXProcessSection
+          v-for="item in $store.getters.getUXProcesses"
+          :key="item.id"
+          :title="item.title"
+          :process_steps="$store.getters.getProcessSteps(item.id)"
+        />
       </v-col>
     </v-row>
   </v-container>
@@ -29,6 +34,21 @@ export default {
   components: {
     UXProcessSection
   },
-  methods: {}
+  methods: {},
+  computed: {
+    isDataLoaded() {
+      return this.$store.state.is_data_loaded;
+    }
+  },
+  beforeCreate() {
+    this.$store
+      .dispatch("GET_DATA")
+      .then(() => {
+        console.log("asdas");
+      })
+      .catch(e => {
+        console.log(e.message, "oopp");
+      });
+  }
 };
 </script>

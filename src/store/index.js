@@ -18,6 +18,9 @@ export default new Vuex.Store({
     },
     getUXProcesses: state => {
       return state.ux_processes;
+    },
+    getProcessSteps: state => id => {
+      return state.process_steps.filter(step => step.ux_process_id === id);
     }
   },
   mutations: {
