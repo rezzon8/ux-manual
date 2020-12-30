@@ -3,6 +3,7 @@
     <v-row>
       <v-col cols="12">
         <v-divider></v-divider>
+
         <h4 class="display-1 mt-3">{{ title }}</h4>
         <v-row>
           <v-col cols="9">
@@ -32,7 +33,11 @@
             {{ copy }}
           </v-card-text>
           <v-card-actions class="mt-auto align-self-end">
-            <v-btn :style="{ backgroundColor: color }" class="white--text">
+            <v-btn
+              :style="{ backgroundColor: color }"
+              class="white--text"
+              @click="$store.state.dialog = !$store.state.dialog"
+            >
               View
             </v-btn>
           </v-card-actions>
@@ -54,6 +59,10 @@ export default {
   },
 
   data: () => ({}),
-  computed: {}
+  computed: {
+    dialog() {
+      return this.$store.state.dialog;
+    }
+  }
 };
 </script>
