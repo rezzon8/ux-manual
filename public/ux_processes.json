@@ -6,7 +6,7 @@
       "icon": "looks_one",
       "copy": "After a kickoff meeting about your goals and mission, we conduct a UX review of your current status. As a result, you get an analysis stating the opportunities to develop. We offer UX Audit as an independent service as well.",
       "href": "ux_audit",
-      "color": "indigo",
+      "color": "#3f51b5",
       "image": "https://cdn.vuetifyjs.com/images/cards/desert.jpg"
     },
     {
@@ -15,7 +15,7 @@
       "icon": "looks_two",
       "copy": "Next to the business goals, the users' goals are equally important. We gain insights, get to know you users' needs, goals, understand their behavior and context.",
       "href": "ux_research",
-      "color": "#a8ce62",
+      "color": "#4CAF50",
       "image": "https://cdn.vuetifyjs.com/images/cards/desert.jpg"
     },
     {
@@ -24,7 +24,7 @@
       "icon": "looks_3",
       "copy": "After collecting data from your users, we utilize different methods to synthesize the insights. This phase will enable us to conduct the design phase with the users’ needs in mind.",
       "href": "data_analysis",
-      "color": "#ffc200",
+      "color": "#FF9800",
       "image": "https://cdn.vuetifyjs.com/images/cards/desert.jpg"
     },
     {

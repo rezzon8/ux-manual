@@ -29,7 +29,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer> -->
-    <v-app-bar app color="primary">
+    <v-app-bar app color="primary" class="elevation-8">
       <v-toolbar-title>The UX Manual</v-toolbar-title>
 
       <!-- <v-btn
@@ -75,3 +75,9 @@ export default {
   }
 };
 </script>
+
+<style>
+.v-card__text {
+  padding-top: 10px !important;
+}
+</style>

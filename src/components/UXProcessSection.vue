@@ -2,7 +2,8 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <h4 class="display-1">{{ title }}</h4>
+        <v-divider></v-divider>
+        <h4 class="display-1 mt-3">{{ title }}</h4>
         <h4 class="subtitle-1">{{ copy }}</h4>
       </v-col>
       <v-col
@@ -13,15 +14,14 @@
         cols="4"
       >
         <v-card
-          outlined
           v-for="(copy, index) in item.copy.introduction"
           :key="index"
-          class="d-flex align-start flex-column"
+          class="d-flex align-start flex-column elevation-5"
         >
           <v-card-title
-            class="mb-2"
             style="width: 100%;"
-            :style="{ backgroundColor: color }">
+            :style="{ backgroundColor: color }"
+          >
             {{ item.title }}
           </v-card-title>
           <v-card-text>
