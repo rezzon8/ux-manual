@@ -4,7 +4,11 @@
       <v-col cols="12">
         <v-divider></v-divider>
         <h4 class="display-1 mt-3">{{ title }}</h4>
-        <h4 class="subtitle-1">{{ copy }}</h4>
+        <v-row>
+          <v-col cols="9">
+            <h4 class="subtitle-1">{{ copy }}</h4>
+          </v-col>
+        </v-row>
       </v-col>
       <v-col
         v-for="item in process_steps"
