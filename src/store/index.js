@@ -28,6 +28,9 @@ export default new Vuex.Store({
     SET_DATA_LOAD_STATE(state, val) {
       state.is_data_loaded = val;
     },
+    SET_DIALOG_STATE(state, val) {
+      state.dialog = val;
+    },
     SET_DATA_PROCESSING(state, val) {
       state.is_data_processing = val;
     },
