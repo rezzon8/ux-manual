@@ -20,6 +20,7 @@
           :title="item.title"
           :process_steps="$store.getters.getProcessSteps(item.id)"
         />
+        <Dialog></Dialog>
       </v-col>
     </v-row>
   </v-container>
@@ -28,13 +29,14 @@
 <script>
 // @ is an alias to /src
 import UXProcessSection from "@/components/UXProcessSection.vue";
+import Dialog from "@/components/Dialog.vue";
 
 export default {
   name: "UX_manual",
   components: {
-    UXProcessSection
+    UXProcessSection,
+    Dialog
   },
-  methods: {},
   computed: {
     isDataLoaded() {
       return this.$store.state.is_data_loaded;
@@ -47,7 +49,7 @@ export default {
         console.log("asdas");
       })
       .catch(e => {
-        console.log(e.message, "oopp");
+        console.log(e.message);
       });
   }
 };

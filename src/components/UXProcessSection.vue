@@ -17,14 +17,14 @@
           :key="index"
           class="d-flex align-start flex-column"
         >
-          <v-card-title>
+          <v-card-title class="primary mb-2" style="width: 100%">
             {{ item.title }}
           </v-card-title>
           <v-card-text>
             {{ copy }}
           </v-card-text>
           <v-card-actions class="mt-auto align-self-end">
-            <v-btn outlined depressed color="primary">
+            <v-btn outlined depressed color="primary white--text">
               View
             </v-btn>
           </v-card-actions>

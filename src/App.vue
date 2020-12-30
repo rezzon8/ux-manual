@@ -1,5 +1,8 @@
 <template>
   <v-app>
+    <v-overlay :value="$store.state.is_data_processing">
+      <v-progress-circular indeterminate size="64"></v-progress-circular>
+    </v-overlay>
     <!-- <v-navigation-drawer app v-model="drawer">
       <v-list-item>
         <v-list-item-content>
@@ -26,16 +29,8 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer> -->
-    <v-app-bar app color="primary" dark elevation="0">
+    <v-app-bar app color="primary">
       <v-toolbar-title>The UX Manual</v-toolbar-title>
-      <v-progress-linear
-        :active="$store.state.is_data_processing"
-        :indeterminate="$store.state.is_data_processing"
-        absolute
-        bottom
-        color="white accent-4"
-      ></v-progress-linear>
-      <v-spacer></v-spacer>
 
       <!-- <v-btn
         href="https://github.com/vuetifyjs/vuetify/releases/latest"

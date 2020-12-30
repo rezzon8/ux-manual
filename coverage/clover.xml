@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1609347660126" clover="3.2.0">
+  <project timestamp="1609347660127" name="All files">
+    <metrics statements="8" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="3" elements="14" coveredelements="8" complexity="0" loc="8" ncloc="8" packages="2" files="3" classes="3"/>
+    <package name="components">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="Dialog.vue" path="/Projects/sandbox/ux-manual/src/components/Dialog.vue">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="35" count="1" type="stmt"/>
+      </file>
+      <file name="UXProcessSection.vue" path="/Projects/sandbox/ux-manual/src/components/UXProcessSection.vue">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="46" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="views">
+      <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
+      <file name="Home.vue" path="/Projects/sandbox/ux-manual/src/views/Home.vue">
+        <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

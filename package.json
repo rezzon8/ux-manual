@@ -7,6 +7,7 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
+    "test:coverage": "vue-cli-service test:unit --updateSnapshot --coverage",
     "lint": "vue-cli-service lint",
     "make:component": "vue-cli-service make:component",
     "make:directive": "vue-cli-service make:directive",
