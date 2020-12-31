@@ -36,7 +36,7 @@
             <v-btn
               :style="{ backgroundColor: color }"
               class="white--text"
-              @click="$store.state.dialog = !$store.state.dialog"
+              @click="$store.state.dialog = $store.getters.dialog"
             >
               View
             </v-btn>

@@ -2,8 +2,8 @@
   <v-container class="home">
     <v-row class="text-center">
       <v-col class="mb-4">
+        <v-icon size="42" class="mr-3">mdi-book-open-page-variant</v-icon>
         <h1 class="display-2 font-weight-bold mb-3 mt-3">
-          <v-icon x-large class="mr-3">mdi-book-open-page-variant</v-icon>
           The UX Manual
         </h1>
 

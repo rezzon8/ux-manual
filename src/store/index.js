@@ -22,6 +22,9 @@ export default new Vuex.Store({
     },
     getProcessSteps: state => id => {
       return state.process_steps.filter(step => step.ux_process_id === id);
+    },
+    get_dialog_state: state => {
+      return (state.dialog = !state.dialog);
     }
   },
   mutations: {

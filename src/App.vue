@@ -30,9 +30,9 @@
       </v-list>
     </v-navigation-drawer> -->
     <v-app-bar app color="primary" class="elevation-8">
-      <v-icon>mdi-book-open-page-variant</v-icon>
+      <v-icon size="26">mdi-book-open-page-variant</v-icon>
       <v-toolbar-title class="ml-3">
-        The UX Manual
+        <h2>The UX Manual</h2>
       </v-toolbar-title>
 
       <!-- <v-btn
