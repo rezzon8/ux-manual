@@ -23,7 +23,7 @@
           :color="item.color"
           :process_steps="$store.getters.getProcessSteps(item.id)"
         />
-        <Dialog :dialog="displayDialog"></Dialog>
+        <Dialog :dialog="displayDialog" @closeDialog="closeDialog"></Dialog>
       </v-col>
     </v-row>
   </v-container>
@@ -41,18 +41,20 @@ export default {
     Dialog
   },
   computed: {
-    isDataLoaded() {
-      return this.$store.state.is_data_loaded;
-    },
     displayDialog() {
-      return true;
+      return this.$store.state.dialog;
+    }
+  },
+  methods: {
+    closeDialog() {
+      console.log("asdasd");
     }
   },
   beforeCreate() {
     this.$store
       .dispatch("GET_DATA")
       .then(() => {
-        console.log("asdas");
+        // console.log("data loaded");
       })
       .catch(e => {
         console.log(e.message);

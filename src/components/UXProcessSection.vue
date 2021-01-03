@@ -36,7 +36,7 @@
             <v-btn
               :style="{ backgroundColor: color }"
               class="white--text"
-              @click="$store.state.dialog = $store.getters.dialog"
+              @click="$store.state.dialog = !$store.getters.dialog"
             >
               View
             </v-btn>
@@ -50,19 +50,11 @@
 <script>
 export default {
   name: "UXProcessSection",
-
   props: {
     process_steps: Array,
     title: String,
     copy: String,
     color: String
-  },
-
-  data: () => ({}),
-  computed: {
-    dialog() {
-      return this.$store.state.dialog;
-    }
   }
 };
 </script>

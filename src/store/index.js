@@ -11,7 +11,7 @@ export default new Vuex.Store({
     has_data_load_error: false,
     ux_processes: [],
     process_steps: [],
-    dialog: false
+    dialog: true
   },
   getters: {
     get_data_load_state: state => {
@@ -24,7 +24,7 @@ export default new Vuex.Store({
       return state.process_steps.filter(step => step.ux_process_id === id);
     },
     get_dialog_state: state => {
-      return (state.dialog = !state.dialog);
+      return state.dialog;
     }
   },
   mutations: {

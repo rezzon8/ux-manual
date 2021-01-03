@@ -20,7 +20,7 @@
 
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="primary" @click="dialog = !dialog">
+          <v-btn color="primary" @click="$emit('closeDialog')">
             Close
           </v-btn>
         </v-card-actions>
