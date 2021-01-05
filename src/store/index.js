@@ -20,6 +20,9 @@ export default new Vuex.Store({
     getUXProcesses: state => {
       return state.ux_processes;
     },
+    getProcessStep: state => id => {
+      return state.process_steps.find(step => step.id === id);
+    },
     getProcessSteps: state => id => {
       return state.process_steps.filter(step => step.ux_process_id === id);
     },
