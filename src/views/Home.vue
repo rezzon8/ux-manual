@@ -4,7 +4,7 @@
       <v-col class="mb-4">
         <v-icon size="42" class="mr-3">mdi-book-open-page-variant</v-icon>
         <h1 class="display-2 font-weight-bold mb-3 mt-3">
-          The UX Manual
+          The UX Manual - test
         </h1>
 
         <p class="subheading font-weight-regular">
