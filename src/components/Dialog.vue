@@ -56,7 +56,7 @@
               </ul>
             </v-col>
           </v-row>
-          <v-row v-if="copy.the_process.summary > 0">
+          <v-row v-if="copy.the_process && copy.the_process.summary.length > 0">
             <v-col>
               <h3>Summary</h3>
               <p v-for="(item, o) in copy.the_process.summary" :key="o">
