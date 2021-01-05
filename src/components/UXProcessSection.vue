@@ -4,7 +4,7 @@
       <v-col cols="12">
         <v-divider></v-divider>
 
-        <h4 class="display-1 mt-3">{{ title }}</h4>
+        <h3 class="display-1 mt-3">{{ title }}</h3>
         <v-row>
           <v-col cols="9">
             <h4 class="subtitle-1">{{ copy }}</h4>
@@ -16,7 +16,10 @@
         :key="item.id"
         :href="item.href"
         class="mb-5 d-flex align-stretch"
-        cols="4"
+        cols="12"
+        sm="6"
+        md="4"
+        lg="3"
       >
         <v-card
           v-for="(copy, index) in item.copy.introduction"
