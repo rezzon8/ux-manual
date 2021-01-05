@@ -11,7 +11,7 @@ export default new Vuex.Store({
     has_data_load_error: false,
     ux_processes: [],
     process_steps: [],
-    dialog: true
+    dialog: false
   },
   getters: {
     get_data_load_state: state => {
