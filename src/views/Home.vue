@@ -8,8 +8,8 @@
         </h1>
 
         <p class="subheading font-weight-regular">
-          A reference guide and resource for the processes <br />
-          of which UX strategy is comprised
+          A reference guide and resource for the processes of which UX strategy
+          is comprised
         </p>
       </v-col>
     </v-row>
