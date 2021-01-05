@@ -1,6 +1,10 @@
 <template>
   <div class="text-center">
-    <v-dialog v-model="dialog" width="800">
+    <v-dialog
+      v-model="dialog"
+      width="800"
+      @click:outside="$emit('closeDialog')"
+    >
       <v-card>
         <v-card-title class="headline primary">
           Privacy Policy
