@@ -16,7 +16,10 @@
         :key="item.id"
         :href="item.href"
         class="mb-5 d-flex align-stretch"
-        cols="4"
+        cols="12"
+        sm="6"
+        md="4"
+        lg="3"
       >
         <v-card
           v-for="(copy, index) in item.copy.introduction"
