@@ -57,7 +57,6 @@ describe("Home.vue", () => {
     expect(wrapper.exists()).toBe(true);
   });
   it("display a title", () => {
-    expect(wrapper.find("h1").exists()).toBe(true);
     expect(wrapper.find("h1").html()).toContain("The UX Manual");
   });
   it('should have a ".subheading" classed element', () => {
