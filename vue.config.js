@@ -11,7 +11,7 @@ module.exports = {
     workboxPluginMode: "InjectManifest",
     workboxOptions: {
       // swSrc is required in InjectManifest mode.
-      swSrc: "registerServiceWorker.js"
+      swSrc: "ist/service-worker.js"
       // ...other Workbox options...
     }
   }
