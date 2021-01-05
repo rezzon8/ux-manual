@@ -1,9 +1,6 @@
 .DS_Store
 node_modules
-/dist
 coverage
-.firebase
-.github
 
 /tests/e2e/logs/
 
