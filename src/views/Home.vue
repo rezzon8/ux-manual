@@ -21,9 +21,16 @@
           :title="item.title"
           :copy="item.copy"
           :color="item.color"
+          @openDialog="openDialog"
           :process_steps="$store.getters.getProcessSteps(item.id)"
         />
-        <Dialog :dialog="get_dialog_state" @closeDialog="closeDialog" />
+        <Dialog
+          :dialog="get_dialog_state"
+          :color="color"
+          :title="dialog.title"
+          :copy="dialog.copy"
+          @closeDialog="closeDialog"
+        />
       </v-col>
     </v-row>
   </v-container>
@@ -41,16 +48,33 @@ export default {
     UXProcessSection,
     Dialog
   },
+  data() {
+    return {
+      color: "blue",
+      dialog: {
+        title: "Foo",
+        copy: {}
+      }
+    };
+  },
   computed: {
-    ...mapGetters(["get_dialog_state"])
+    ...mapGetters(["get_dialog_state", "getProcessStep"])
   },
   methods: {
     ...mapMutations(["SET_DIALOG_STATE"]),
     closeDialog() {
       this.SET_DIALOG_STATE(false);
     },
-    displayDialog() {
+    openDialog(e) {
+      if (e.id) this.setSelectedStep(e.id, e.color);
       this.SET_DIALOG_STATE(true);
+    },
+    setSelectedStep(id, color) {
+      const processStep = this.getProcessStep(id);
+      this.color = color;
+      console.log(processStep);
+      this.dialog.title = processStep.title;
+      this.dialog.copy = processStep.copy;
     }
   },
   beforeCreate() {
