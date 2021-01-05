@@ -2,10 +2,8 @@ import { mount, createLocalVue } from "@vue/test-utils";
 import Vue from "vue";
 import Vuetify from "vuetify";
 import UXProcessSection from "@/components/UXProcessSection.vue";
-
 Vue.use(Vuetify); // added to prevent vuetify lint errors
 const localVue = createLocalVue();
-
 const props = {
   ux_processes: [
     {
@@ -29,14 +27,11 @@ const props = {
     }
   ]
 };
-
 describe("UXProcessSection.vue", () => {
   let vuetify;
-
   beforeEach(() => {
     vuetify = new Vuetify();
   });
-
   it("should have a custom title", () => {
     const props = {
       title: "new message"
@@ -46,7 +41,6 @@ describe("UXProcessSection.vue", () => {
     });
     expect(wrapper.text()).toMatch(props.title);
   });
-
   it("should render a list of process_steps", () => {
     const wrapper = mount(UXProcessSection, {
       localVue,
@@ -56,5 +50,15 @@ describe("UXProcessSection.vue", () => {
     expect(wrapper.find(".v-card__title").text()).toMatch(
       "Stakeholder Interview"
     );
+  });
+  it("should emit a click handler", async () => {
+    const wrapper = mount(UXProcessSection, {
+      localVue,
+      vuetify,
+      propsData: { process_steps: props.process_steps }
+    });
+    console.log(wrapper.html());
+    await wrapper.trigger("click");
+    console.log(wrapper.html());
   });
 });
