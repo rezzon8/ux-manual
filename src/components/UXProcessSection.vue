@@ -36,7 +36,12 @@
             <v-btn
               :style="{ backgroundColor: color }"
               class="white--text"
-              @click="$store.state.dialog = !$store.getters.dialog"
+              @click="
+                $emit('openDialog', {
+                  id: item.id,
+                  color: color
+                })
+              "
             >
               View
             </v-btn>
