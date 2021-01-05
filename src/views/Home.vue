@@ -8,7 +8,7 @@
         </h1>
 
         <p class="subheading font-weight-regular">
-          A reference guide and resouce for the processes <br />
+          A reference guide and resource for the processes <br />
           of which UX strategy is comprised
         </p>
       </v-col>
@@ -23,7 +23,7 @@
           :color="item.color"
           :process_steps="$store.getters.getProcessSteps(item.id)"
         />
-        <Dialog :dialog="displayDialog" @closeDialog="closeDialog"></Dialog>
+        <Dialog :dialog="get_dialog_state" @closeDialog="closeDialog" />
       </v-col>
     </v-row>
   </v-container>
@@ -33,6 +33,7 @@
 // @ is an alias to /src
 import UXProcessSection from "@/components/UXProcessSection.vue";
 import Dialog from "@/components/Dialog.vue";
+import { mapMutations, mapGetters } from "vuex";
 
 export default {
   name: "UX_manual",
@@ -41,13 +42,15 @@ export default {
     Dialog
   },
   computed: {
-    displayDialog() {
-      return this.$store.state.dialog;
-    }
+    ...mapGetters(["get_dialog_state"])
   },
   methods: {
+    ...mapMutations(["SET_DIALOG_STATE"]),
     closeDialog() {
-      console.log("asdasd");
+      this.SET_DIALOG_STATE(false);
+    },
+    displayDialog() {
+      this.SET_DIALOG_STATE(true);
     }
   },
   beforeCreate() {
