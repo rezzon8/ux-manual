@@ -3,9 +3,10 @@
     <v-dialog
       v-model="dialog"
       width="800"
+      scrollable
       @click:outside="$emit('closeDialog')"
     >
-      <v-card>
+      <v-card v-if="$store.getters.get_data_load_state">
         <v-card-title class="headline" style="position:relative;">
           <div style="z-index: 1;">
             {{ title }}
@@ -13,40 +14,56 @@
           <v-sheet :color="color"></v-sheet>
         </v-card-title>
 
-        <v-card-text>
-          <div>
-            <h4>Introduction</h4>
-            <p v-for="(item, i) in copy.introduction" :key="i">{{ item }}</p>
-          </div>
-          <div>
-            <h4>{{ copy.helps_how.title }}</h4>
-            <p v-for="(item, i) in copy.helps_how.copy" :key="i">{{ item }}</p>
-          </div>
-          <div>
-            <h4>{{ copy.you_get.title }}</h4>
-            <p v-for="(item, i) in copy.you_get.copy" :key="i">{{ item }}</p>
-          </div>
-          <div>
-            <p v-for="(item, i) in copy.additional_info" :key="i">
-              {{ item }}
-            </p>
-          </div>
-          <div>
-            <h4>{{ copy.the_process.title }}</h4>
-            <p v-for="(item, i) in copy.the_process.copy" :key="i">
-              {{ item }}
-            </p>
-            <ul>
-              <li v-for="(item, i) in copy.the_process.steps" :key="i">
+        <v-card-text class="pt-5">
+          <v-row>
+            <v-col>
+              <h3>Introduction</h3>
+              <p v-for="(item, i) in copy.introduction" :key="i">{{ item }}</p>
+            </v-col>
+          </v-row>
+          <v-row v-if="copy.helps_how">
+            <v-col>
+              <h3>{{ copy.helps_how.title }}</h3>
+              <p v-for="(item, j) in copy.helps_how.copy" :key="j">
                 {{ item }}
-              </li>
-            </ul>
-            <br />
-            <h4>Summary</h4>
-            <p v-for="(item, i) in copy.the_process.summary" :key="i">
-              {{ item }}
-            </p>
-          </div>
+              </p>
+            </v-col>
+          </v-row>
+          <v-row v-if="copy.you_get">
+            <v-col>
+              <h3>{{ copy.you_get.title }}</h3>
+              <p v-for="(item, k) in copy.you_get.copy" :key="k">{{ item }}</p>
+            </v-col>
+          </v-row>
+          <v-row v-if="copy.additional_info.length > 0">
+            <v-col>
+              <h3>Additional information</h3>
+              <p v-for="(item, l) in copy.additional_info" :key="l">
+                {{ item }}
+              </p>
+            </v-col>
+          </v-row>
+          <v-row v-if="copy.the_process">
+            <v-col>
+              <h3>{{ copy.the_process.title }}</h3>
+              <p v-for="(item, m) in copy.the_process.copy" :key="m">
+                {{ item }}
+              </p>
+              <ul>
+                <li v-for="(item, n) in copy.the_process.steps" :key="n">
+                  {{ item }}
+                </li>
+              </ul>
+            </v-col>
+          </v-row>
+          <v-row v-if="copy.the_process && copy.the_process.summary.length > 0">
+            <v-col>
+              <h3>Summary</h3>
+              <p v-for="(item, o) in copy.the_process.summary" :key="o">
+                {{ item }}
+              </p>
+            </v-col>
+          </v-row>
         </v-card-text>
 
         <v-divider></v-divider>
@@ -85,7 +102,7 @@ export default {
 </script>
 
 <style>
-.v-card__title .v-sheet {
+.v-dialog .v-card__title .v-sheet {
   position: absolute;
   top: 0;
   right: 0;

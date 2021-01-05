@@ -155,14 +155,18 @@
         },
         "you_get": {
           "title": "What will you get?",
-          "copy": "You get a detailed spreadsheet with the indexed content of your website or application, and a document explaining what parts should be modified and how."
+          "copy": [
+            "You get a detailed spreadsheet with the indexed content of your website or application, and a document explaining what parts should be modified and how."
+          ]
         },
         "additional_info": [
           "A Content Inventory (or content audit) can serve as a great starting points for many parts of the UX design process. Overall, it enables us to see the \"whole picture\" of your service or product, taking into account each piece of your content."
         ],
         "the_process": {
           "title": "What is the process?",
-          "copy": "The first step is setting the goals and the scope of your content inventory: what are we trying to accomplish, and which parts of the system or website should be examined. The most common goals are to identify",
+          "copy": [
+            "The first step is setting the goals and the scope of your content inventory: what are we trying to accomplish, and which parts of the system or website should be examined. The most common goals are to identify"
+          ],
           "steps": [
             "the elements of the content, and ",
             "how these are structured, what are the existing relations (e.g. internal links)",
