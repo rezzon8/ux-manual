@@ -35,7 +35,7 @@
               <p v-for="(item, k) in copy.you_get.copy" :key="k">{{ item }}</p>
             </v-col>
           </v-row>
-          <v-row v-if="copy.additional_info.length > 0">
+          <v-row v-if="copy.additional_info">
             <v-col>
               <h3>Additional information</h3>
               <p v-for="(item, l) in copy.additional_info" :key="l">
@@ -56,9 +56,8 @@
               </ul>
             </v-col>
           </v-row>
-          <v-row v-if="copy.the_process && copy.the_process.summary.length > 0">
+          <v-row v-if="copy.the_process">
             <v-col>
-              <h3>Summary</h3>
               <p v-for="(item, o) in copy.the_process.summary" :key="o">
                 {{ item }}
               </p>
