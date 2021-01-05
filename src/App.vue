@@ -1,6 +1,9 @@
 <template>
   <v-app>
-    <v-navigation-drawer app v-model="drawer">
+    <v-overlay :value="$store.state.is_data_processing">
+      <v-progress-circular indeterminate size="64"></v-progress-circular>
+    </v-overlay>
+    <!-- <v-navigation-drawer app v-model="drawer">
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="title">
@@ -25,13 +28,12 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
-    </v-navigation-drawer>
-    <v-app-bar app color="primary" dark elevation="0">
-      <v-icon @click="drawer = !drawer">
-        mdi-menu
-      </v-icon>
-
-      <v-spacer></v-spacer>
+    </v-navigation-drawer> -->
+    <v-app-bar app color="primary" class="elevation-8">
+      <v-icon size="26">mdi-book-open-page-variant</v-icon>
+      <v-toolbar-title class="ml-3">
+        <h2>The UX Manual</h2>
+      </v-toolbar-title>
 
       <!-- <v-btn
         href="https://github.com/vuetifyjs/vuetify/releases/latest"
@@ -55,12 +57,30 @@ export default {
 
   data: () => ({
     //
-    drawer: true,
-    items: [
-      { title: "Dashboard", icon: "mdi-view-dashboard", url: "/" },
-      { title: "About", icon: "mdi-help-box", url: "/about" }
-    ],
-    right: null
-  })
+    // drawer: true,
+    // items: [
+    //   { title: "Dashboard", icon: "mdi-view-dashboard", url: "/" },
+    //   { title: "About", icon: "mdi-help-box", url: "/about" }
+    // ],
+    // right: null
+  }),
+  methods: {
+    loadData() {
+      this.$store
+        .dispatch("GET_DATA")
+        .then(() => {
+          console.log("asdas");
+        })
+        .catch(e => {
+          console.log(e.message);
+        });
+    }
+  }
 };
 </script>
+
+<style>
+.v-card__text {
+  padding-top: 10px !important;
+}
+</style>

@@ -1,4 +1,5 @@
 # ux-manual
+A reference guide and resource for the processes of which UX strategy is comprised
 
 ## Project setup
 ```
