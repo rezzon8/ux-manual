@@ -13,7 +13,8 @@
     "make:layout": "vue-cli-service make:layout",
     "make:mixin": "vue-cli-service make:mixin",
     "make:view": "vue-cli-service make:view",
-    "test:coverage": "vue-cli-service test:unit --updateSnapshot --coverage"
+    "test:coverage": "vue-cli-service test:unit --updateSnapshot --coverage",
+    "test:unit:watch": "vue-cli-service test:unit --watch"
   },
   "dependencies": {
     "core-js": "^3.6.5",
