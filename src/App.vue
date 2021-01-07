@@ -35,7 +35,7 @@
           Login
         </v-card-title>
         <v-card-text class="pt-5">
-          Login form
+          <LoginForm />
         </v-card-text>
         <v-divider></v-divider>
         <v-card-actions>
@@ -69,12 +69,14 @@
 
 <script>
 import { mapMutations, mapGetters } from "vuex";
+import LoginForm from "@/components/forms/LoginForm.vue";
 import SignUpForm from "@/components/forms/SignUpForm.vue";
 
 export default {
   name: "UX_manual",
   components: {
-    SignUpForm
+    SignUpForm,
+    LoginForm
   },
   data() {
     return {
