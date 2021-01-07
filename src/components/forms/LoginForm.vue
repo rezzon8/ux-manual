@@ -1,30 +1,25 @@
 <template>
   <form>
     <v-text-field
-      v-model="name"
-      :error-messages="nameErrors"
-      :counter="10"
-      label="Email"
-      required
-      @input="$v.name.$touch()"
-      @blur="$v.name.$touch()"
-    ></v-text-field>
-    <v-text-field
       v-model="email"
       :error-messages="emailErrors"
-      label="Password"
+      label="Email"
       required
       @input="$v.email.$touch()"
       @blur="$v.email.$touch()"
     ></v-text-field>
-    <v-checkbox
-      v-model="checkbox"
-      :error-messages="checkboxErrors"
-      label="Remain logged in?"
+    <v-text-field
+      v-model="password"
+      :error-messages="passwordErrors"
+      :counter="16"
+      label="Password"
       required
-      @change="$v.checkbox.$touch()"
-      @blur="$v.checkbox.$touch()"
-    ></v-checkbox>
+      :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
+      @click:append="showPassword = !showPassword"
+      :type="showPassword ? 'text' : 'password'"
+      @input="$v.password.$touch()"
+      @blur="$v.password.$touch()"
+    ></v-text-field>
 
     <v-btn class="mr-4" @click="submit">
       Login
@@ -44,37 +39,23 @@ export default {
   mixins: [validationMixin],
 
   validations: {
-    name: { required, maxLength: maxLength(10) },
     email: { required, email },
-    checkbox: {
-      checked(val) {
-        return val;
-      }
-    }
+    password: { required, maxLength: maxLength(16) }
   },
 
   data: () => ({
-    name: "",
     email: "",
-    checkbox: false
+    password: "",
+    showPassword: false
   }),
 
   computed: {
-    checkboxErrors() {
-      return true;
-    },
-    selectErrors() {
+    passwordErrors() {
       const errors = [];
-      if (!this.$v.select.$dirty) return errors;
-      !this.$v.select.required && errors.push("Item is required");
-      return errors;
-    },
-    nameErrors() {
-      const errors = [];
-      if (!this.$v.name.$dirty) return errors;
-      !this.$v.name.maxLength &&
-        errors.push("Name must be at most 10 characters long");
-      !this.$v.name.required && errors.push("Name is required.");
+      if (!this.$v.password.$dirty) return errors;
+      !this.$v.password.maxLength &&
+        errors.push("Password must be at most 16 characters long");
+      !this.$v.password.required && errors.push("Password is required.");
       return errors;
     },
     emailErrors() {
@@ -92,10 +73,9 @@ export default {
     },
     clear() {
       this.$v.$reset();
-      this.name = "";
       this.email = "";
-      this.select = null;
-      this.checkbox = false;
+      this.password = "";
+      this.showPassword = false;
     }
   }
 };
