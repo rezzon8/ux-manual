@@ -11,7 +11,7 @@
     <v-text-field
       v-model="password"
       :error-messages="passwordErrors"
-      :counter="16"
+      counter="16"
       label="Password"
       required
       :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
@@ -21,10 +21,10 @@
       @blur="$v.password.$touch()"
     ></v-text-field>
 
-    <v-btn class="mr-4" @click="submit">
+    <v-btn class="mr-4 z-depth-0" @click="submit">
       Login
     </v-btn>
-    <v-btn @click="clear">
+    <v-btn text @click="clear">
       clear
     </v-btn>
   </form>
