@@ -20,7 +20,7 @@
         Signup
       </v-btn>
 
-      <v-btn text>
+      <v-btn text @click.stop="logOut">
         Logout
       </v-btn>
     </v-app-bar>
@@ -95,6 +95,9 @@ export default {
     },
     openDialog() {
       this.SET_DIALOG_STATE(true);
+    },
+    logout() {
+      // logout
     }
   },
   beforeCreate() {
