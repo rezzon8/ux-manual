@@ -2,6 +2,7 @@ import { createLocalVue, mount } from "@vue/test-utils";
 import Vue from "vue";
 import Vuex from "vuex";
 import Vuetify from "vuetify";
+import App from "@/App.vue";
 import UX_manual from "@/views/Home.vue";
 
 Vue.use(Vuetify); // added to prevent Vuetify lint errors
@@ -43,17 +44,23 @@ const actions = {
   GET_DATA: jest.fn()
 };
 
-const store = new Vuex.Store({ actions, state });
+const getters = {
+  get_dialog_state: () => true
+};
+
+const store = new Vuex.Store({ actions, state, getters });
 
 describe("Home.vue", () => {
   beforeEach(() => {
     wrapper = mount(UX_manual, {
+      parentComponent: App,
       store,
       localVue,
       vuetify
     });
   });
   it("should render", () => {
+    console.log(wrapper.html());
     expect(wrapper.exists()).toBe(true);
   });
   it("display a title", () => {
@@ -62,9 +69,6 @@ describe("Home.vue", () => {
   });
   it('should have a ".subheading" classed element', () => {
     expect(wrapper.get(".subheading").exists()).toBe(true);
-  });
-  it("should contain a dialog", () => {
-    expect(wrapper.get(".v-dialog__container").exists()).toBe(true);
   });
   it("should call GET_DATA action", () => {
     expect(actions.GET_DATA).toHaveBeenCalled();
