@@ -43,6 +43,7 @@
 <script>
 import { validationMixin } from "vuelidate";
 import { required, minLength, email, sameAs } from "vuelidate/lib/validators";
+
 export default {
   name: "SignUpForm",
 
@@ -62,9 +63,6 @@ export default {
   }),
 
   computed: {
-    isFormSubmitReady() {
-      return this.$v.$invalid;
-    },
     emailErrors() {
       const errors = [];
       if (!this.$v.email.$dirty) return errors;
@@ -86,6 +84,9 @@ export default {
       !this.$v.confirmPassword.sameAsPassword &&
         errors.push("Passwords do not match");
       return errors;
+    },
+    isFormSubmitReady() {
+      return this.$v.$invalid;
     }
   },
 

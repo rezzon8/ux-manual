@@ -33,6 +33,7 @@
 <script>
 import { validationMixin } from "vuelidate";
 import { required, email } from "vuelidate/lib/validators";
+
 export default {
   name: "LoginForm",
 
@@ -50,9 +51,6 @@ export default {
   }),
 
   computed: {
-    isFormSubmitReady() {
-      return this.$v.$invalid;
-    },
     emailErrors() {
       const errors = [];
       if (!this.$v.email.$dirty) return errors;
@@ -65,6 +63,9 @@ export default {
       if (!this.$v.password.$dirty) return errors;
       !this.$v.password.required && errors.push("Password is required.");
       return errors;
+    },
+    isFormSubmitReady() {
+      return this.$v.$invalid;
     }
   },
 
@@ -72,6 +73,7 @@ export default {
     logIn() {
       this.$v.$touch();
       if (!this.$v.$invalid) {
+        // login to firebase
         console.log({
           email: this.email,
           password: this.password
