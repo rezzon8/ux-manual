@@ -80,6 +80,7 @@
 
 <script>
 export default {
+  name: "UXProcessItem",
   props: {
     dialog: {
       type: Boolean,
