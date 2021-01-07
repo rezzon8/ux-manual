@@ -53,7 +53,7 @@
           Signup
         </v-card-title>
         <v-card-text class="pt-5">
-          Signup form
+          <SignUpForm />
         </v-card-text>
         <v-divider></v-divider>
         <v-card-actions>
@@ -69,9 +69,13 @@
 
 <script>
 import { mapMutations, mapGetters } from "vuex";
+import SignUpForm from "@/components/forms/SignUpForm.vue";
 
 export default {
   name: "UX_manual",
+  components: {
+    SignUpForm
+  },
   data() {
     return {
       color: "blue",
