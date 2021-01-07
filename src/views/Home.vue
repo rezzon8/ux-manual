@@ -2,8 +2,11 @@
   <v-container class="home">
     <v-row class="text-center">
       <v-col class="mb-4">
-        <v-icon size="42" class="mr-3">mdi-book-open-page-variant</v-icon>
-        <h1 class="display-2 font-weight-bold mb-3 mt-3">
+        <h1
+          class="display-2 font-weight-bold mb-3 mt-3 animate__animated animate__tada animate__delay-2s"
+        >
+          <v-icon size="62" class="mb-3">mdi-book-open-page-variant</v-icon>
+          <br />
           The UX Manual
         </h1>
 
@@ -24,8 +27,8 @@
           @openDialog="openDialog"
           :process_steps="$store.getters.getProcessSteps(item.id)"
         />
-        <Dialog
-          :dialog="get_dialog_state"
+        <UXProcessItem
+          :dialog="dialog.visible"
           :color="color"
           :title="dialog.title"
           :copy="dialog.copy"
@@ -39,53 +42,42 @@
 <script>
 // @ is an alias to /src
 import UXProcessSection from "@/components/UXProcessSection.vue";
-import Dialog from "@/components/Dialog.vue";
-import { mapMutations, mapGetters } from "vuex";
+import UXProcessItem from "@/components/UXProcessItem.vue";
+import { mapGetters } from "vuex";
 
 export default {
   name: "UX_manual",
   components: {
     UXProcessSection,
-    Dialog
+    UXProcessItem
   },
   data() {
     return {
       color: "blue",
       dialog: {
-        title: "Foo",
-        copy: {}
+        title: "UX Process Step",
+        copy: {},
+        visible: false
       }
     };
   },
   computed: {
-    ...mapGetters(["get_dialog_state", "getProcessStep"])
+    ...mapGetters(["getProcessStep"])
   },
   methods: {
-    ...mapMutations(["SET_DIALOG_STATE"]),
     closeDialog() {
-      this.SET_DIALOG_STATE(false);
+      this.dialog.visible = false;
     },
     openDialog(e) {
       if (e.id) this.setSelectedStep(e.id, e.color);
-      this.SET_DIALOG_STATE(true);
+      this.dialog.visible = true;
     },
     setSelectedStep(id, color) {
       const processStep = this.getProcessStep(id);
       this.color = color;
-      console.log(processStep);
       this.dialog.title = processStep.title;
       this.dialog.copy = processStep.copy;
     }
-  },
-  beforeCreate() {
-    this.$store
-      .dispatch("GET_DATA")
-      .then(() => {
-        // console.log("data loaded");
-      })
-      .catch(e => {
-        console.log(e.message);
-      });
   }
 };
 </script>
