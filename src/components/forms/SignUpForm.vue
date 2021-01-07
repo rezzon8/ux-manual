@@ -1,14 +1,5 @@
 <template>
-  <form>
-    <v-text-field
-      v-model="name"
-      :error-messages="nameErrors"
-      :counter="10"
-      label="Name"
-      required
-      @input="$v.name.$touch()"
-      @blur="$v.name.$touch()"
-    ></v-text-field>
+  <v-form>
     <v-text-field
       v-model="email"
       :error-messages="emailErrors"
@@ -17,80 +8,62 @@
       @input="$v.email.$touch()"
       @blur="$v.email.$touch()"
     ></v-text-field>
-    <v-select
-      v-model="select"
-      :items="items"
-      :error-messages="selectErrors"
-      label="Item"
+    <v-text-field
+      v-model="password"
+      :error-messages="passwordErrors"
+      counter="16"
+      label="Password"
+      maxLength="16"
       required
-      @change="$v.select.$touch()"
-      @blur="$v.select.$touch()"
-    ></v-select>
-    <v-checkbox
-      v-model="checkbox"
-      :error-messages="checkboxErrors"
-      label="Do you agree?"
+      :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
+      @click:append="showPassword = !showPassword"
+      :type="showPassword ? 'text' : 'password'"
+      @input="$v.password.$touch()"
+      @blur="$v.password.$touch()"
+    ></v-text-field>
+    <v-text-field
+      v-model="confirmPassword"
+      :error-messages="confirmPasswordErrors"
+      label="Confirm password"
       required
-      @change="$v.checkbox.$touch()"
-      @blur="$v.checkbox.$touch()"
-    ></v-checkbox>
+      :type="showPassword ? 'text' : 'password'"
+      @input="$v.confirmPassword.$touch()"
+      @blur="$v.confirmPassword.$touch()"
+    ></v-text-field>
 
-    <v-btn class="mr-4" @click="submit">
-      submit
+    <v-btn :disabled="isFormSubmitReady" class="mr-4" @click="signUp">
+      Signup
     </v-btn>
-    <v-btn text @click="clear">
+    <v-btn text @click="clearForm">
       clear
     </v-btn>
-  </form>
+  </v-form>
 </template>
 
 <script>
 import { validationMixin } from "vuelidate";
-import { required, maxLength, email } from "vuelidate/lib/validators";
+import { required, minLength, email, sameAs } from "vuelidate/lib/validators";
 export default {
   name: "SignUpForm",
 
   mixins: [validationMixin],
 
   validations: {
-    name: { required, maxLength: maxLength(10) },
     email: { required, email },
-    select: { required },
-    checkbox: {
-      checked(val) {
-        return val;
-      }
-    }
+    password: { required, minLength: minLength(8) },
+    confirmPassword: { sameAsPassword: sameAs("password") }
   },
 
   data: () => ({
-    name: "",
     email: "",
-    select: null,
-    items: ["Item 1", "Item 2", "Item 3", "Item 4"],
-    checkbox: false
+    password: "",
+    confirmPassword: "",
+    showPassword: false
   }),
 
   computed: {
-    checkboxErrors() {
-      const errors = [];
-      if (!this.$v.checkbox.$dirty) return errors;
-      !this.$v.checkbox.checked && errors.push("You must agree to continue!");
-      return errors;
-    },
-    selectErrors() {
-      const errors = [];
-      if (!this.$v.select.$dirty) return errors;
-      !this.$v.select.required && errors.push("Item is required");
-      return errors;
-    },
-    nameErrors() {
-      const errors = [];
-      if (!this.$v.name.$dirty) return errors;
-      !this.$v.name.maxLength &&
-        errors.push("Name must be at most 10 characters long");
-      !this.$v.name.required && errors.push("Name is required.");
-      return errors;
+    isFormSubmitReady() {
+      return this.$v.$invalid;
     },
     emailErrors() {
       const errors = [];
@@ -98,19 +71,41 @@ export default {
       !this.$v.email.email && errors.push("Must be valid e-mail");
       !this.$v.email.required && errors.push("E-mail is required");
       return errors;
+    },
+    passwordErrors() {
+      const errors = [];
+      if (!this.$v.password.$dirty) return errors;
+      !this.$v.password.minLength &&
+        errors.push("Password must be at least 8 characters long");
+      !this.$v.password.required && errors.push("Password is required.");
+      return errors;
+    },
+    confirmPasswordErrors() {
+      const errors = [];
+      if (!this.$v.confirmPassword.$dirty) return errors;
+      !this.$v.confirmPassword.sameAsPassword &&
+        errors.push("Passwords do not match");
+      return errors;
     }
   },
 
   methods: {
-    submit() {
+    signUp() {
       this.$v.$touch();
+      if (!this.$v.$invalid) {
+        console.log({
+          email: this.email,
+          password: this.password,
+          confirmPassword: this.confirmPassword
+        });
+      }
     },
-    clear() {
+    clearForm() {
       this.$v.$reset();
-      this.name = "";
       this.email = "";
-      this.select = null;
-      this.checkbox = false;
+      this.password = "";
+      this.confirmPassword = "";
+      this.showPassword = false;
     }
   }
 };
