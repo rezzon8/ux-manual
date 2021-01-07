@@ -61,10 +61,7 @@ export default {
 
   computed: {
     checkboxErrors() {
-      const errors = [];
-      if (!this.$v.checkbox.$dirty) return errors;
-      !this.$v.checkbox.checked && errors.push("You must agree to continue!");
-      return errors;
+      return true;
     },
     selectErrors() {
       const errors = [];
