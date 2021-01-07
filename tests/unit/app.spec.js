@@ -2,8 +2,7 @@ import { createLocalVue, mount } from "@vue/test-utils";
 import Vue from "vue";
 import Vuex from "vuex";
 import Vuetify from "vuetify";
-import App from "@/App.vue";
-import UX_manual from "@/views/Home.vue";
+import UX_manual from "@/App.vue";
 
 Vue.use(Vuetify); // added to prevent Vuetify lint errors
 
@@ -44,33 +43,39 @@ const actions = {
   GET_DATA: jest.fn()
 };
 
-const getters = {
-  get_dialog_state: () => true
-};
+const store = new Vuex.Store({ actions, state });
 
-const store = new Vuex.Store({ actions, state, getters });
+const $route = { path: "/" };
 
 describe("Home.vue", () => {
   beforeEach(() => {
     wrapper = mount(UX_manual, {
-      parentComponent: App,
+      mocks: {
+        $route
+      },
       store,
       localVue,
       vuetify
     });
   });
   it("should render", () => {
-    console.log(wrapper.html());
     expect(wrapper.exists()).toBe(true);
   });
   it("display a title", () => {
-    expect(wrapper.find("h1").html()).toContain("The UX Manual");
-    expect(wrapper.find("h1").exists()).toBe(true);
+    console.log(wrapper.html());
+    expect(wrapper.find("h2").html()).toContain("The UX Manual");
+    expect(wrapper.find("h2").exists()).toBe(true);
   });
-  it('should have a ".subheading" classed element', () => {
-    expect(wrapper.get(".subheading").exists()).toBe(true);
+  it("should have / route", () => {
+    expect(wrapper.vm.$route.path).toBe($route.path);
   });
-  it("should call GET_DATA action", () => {
-    expect(actions.GET_DATA).toHaveBeenCalled();
+  it("should contain a dialog", () => {
+    expect(wrapper.get(".v-dialog__container").exists()).toBe(true);
   });
+  // it("should contain a dialog", () => {
+  //   expect(wrapper.get(".v-dialog__container").exists()).toBe(true);
+  // });
+  // it("should call GET_DATA action", () => {
+  //   expect(actions.GET_DATA).toHaveBeenCalled();
+  // });
 });

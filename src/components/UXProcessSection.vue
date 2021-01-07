@@ -6,7 +6,7 @@
 
         <h3 class="display-1 mt-3">{{ title }}</h3>
         <v-row>
-          <v-col cols="9">
+          <v-col cols="12" lg="9">
             <h4 class="subtitle-1">{{ copy }}</h4>
           </v-col>
         </v-row>
