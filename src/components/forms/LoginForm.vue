@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <v-form>
     <v-text-field
       v-model="email"
       :error-messages="emailErrors"
@@ -21,18 +21,18 @@
       @blur="$v.password.$touch()"
     ></v-text-field>
 
-    <v-btn class="mr-4 z-depth-0" @click="submit">
+    <v-btn :disabled="isFormSubmitReady" class="mr-4" @click="logIn">
       Login
     </v-btn>
     <v-btn text @click="clear">
       clear
     </v-btn>
-  </form>
+  </v-form>
 </template>
 
 <script>
 import { validationMixin } from "vuelidate";
-import { required, maxLength, email } from "vuelidate/lib/validators";
+import { required, email } from "vuelidate/lib/validators";
 export default {
   name: "LoginForm",
 
@@ -40,7 +40,7 @@ export default {
 
   validations: {
     email: { required, email },
-    password: { required, maxLength: maxLength(16) }
+    password: { required }
   },
 
   data: () => ({
@@ -50,13 +50,8 @@ export default {
   }),
 
   computed: {
-    passwordErrors() {
-      const errors = [];
-      if (!this.$v.password.$dirty) return errors;
-      !this.$v.password.maxLength &&
-        errors.push("Password must be at most 16 characters long");
-      !this.$v.password.required && errors.push("Password is required.");
-      return errors;
+    isFormSubmitReady() {
+      return this.$v.$invalid;
     },
     emailErrors() {
       const errors = [];
@@ -64,12 +59,24 @@ export default {
       !this.$v.email.email && errors.push("Must be valid e-mail");
       !this.$v.email.required && errors.push("E-mail is required");
       return errors;
+    },
+    passwordErrors() {
+      const errors = [];
+      if (!this.$v.password.$dirty) return errors;
+      !this.$v.password.required && errors.push("Password is required.");
+      return errors;
     }
   },
 
   methods: {
-    submit() {
+    logIn() {
       this.$v.$touch();
+      if (!this.$v.$invalid) {
+        console.log({
+          email: this.email,
+          password: this.password
+        });
+      }
     },
     clear() {
       this.$v.$reset();
