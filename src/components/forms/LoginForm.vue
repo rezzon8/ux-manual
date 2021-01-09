@@ -21,7 +21,12 @@
       @blur="$v.password.$touch()"
     ></v-text-field>
 
-    <v-btn :disabled="isFormSubmitReady" class="mr-4" @click="logIn">
+    <v-btn
+      :disabled="isFormSubmitReady"
+      class="mr-4"
+      @click="logIn"
+      :loading="$store.state.is_data_processing"
+    >
       Login
     </v-btn>
     <v-btn text @click="clear">
@@ -73,11 +78,11 @@ export default {
     logIn() {
       this.$v.$touch();
       if (!this.$v.$invalid) {
-        // login to firebase
-        console.log({
+        const payload = {
           email: this.email,
           password: this.password
-        });
+        };
+        this.$emit("login", payload);
       }
     },
     clear() {

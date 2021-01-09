@@ -12,17 +12,20 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn text @click.stop="loginDialog = true">
-        Login
-      </v-btn>
+      <template v-if="!userIsAuthenticated">
+        <v-btn text @click.stop="loginDialog = true">
+          Login
+        </v-btn>
 
-      <v-btn text @click.stop="signUpDialog = true">
-        Signup
-      </v-btn>
-
-      <v-btn text @click.stop="logOut">
-        Logout
-      </v-btn>
+        <v-btn text @click.stop="signUpDialog = true">
+          Signup
+        </v-btn>
+      </template>
+      <template v-else>
+        <v-btn text @click.stop="logOut">
+          Logout
+        </v-btn>
+      </template>
     </v-app-bar>
 
     <v-main>
@@ -35,7 +38,7 @@
           Login
         </v-card-title>
         <v-card-text class="pt-5">
-          <LoginForm />
+          <LoginForm @login="logIn" />
         </v-card-text>
         <v-divider></v-divider>
         <v-card-actions>
@@ -53,7 +56,7 @@
           Signup
         </v-card-title>
         <v-card-text class="pt-5">
-          <SignUpForm />
+          <SignUpForm @signup="signUp" />
         </v-card-text>
         <v-divider></v-divider>
         <v-card-actions>
@@ -68,7 +71,7 @@
 </template>
 
 <script>
-import { mapMutations, mapGetters } from "vuex";
+import { mapMutations, mapGetters, mapActions } from "vuex";
 import LoginForm from "@/components/forms/LoginForm.vue";
 import SignUpForm from "@/components/forms/SignUpForm.vue";
 
@@ -86,18 +89,49 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["get_dialog_state"])
+    ...mapGetters(["get_dialog_state", "userIsAuthenticated"])
   },
   methods: {
     ...mapMutations(["SET_DIALOG_STATE"]),
+    ...mapActions(["LOGIN"]),
     closeDialog() {
       this.SET_DIALOG_STATE(false);
     },
     openDialog() {
       this.SET_DIALOG_STATE(true);
     },
-    logout() {
+    signUp(payload) {
+      // signup
+      this.$store
+        .dispatch("LOGIN", payload)
+        .then(() => {
+          this.loginDialog = false;
+        })
+        .catch(e => {
+          console.log(e.message, "error in sign up");
+        });
+    },
+    logIn(payload) {
+      // login
+      this.$store
+        .dispatch("LOGIN", payload)
+        .then(() => {
+          this.loginDialog = false;
+        })
+        .catch(e => {
+          console.log(e.message, "error in login");
+        });
+    },
+    logOut() {
       // logout
+      this.$store
+        .dispatch("LOGOUT")
+        .then(() => {
+          console.log("sdasd");
+        })
+        .catch(e => {
+          console.log(e.message, "error in logout");
+        });
     }
   },
   beforeCreate() {

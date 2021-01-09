@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import axios from "axios";
+import { auth } from "../firebase.service";
 
 Vue.use(Vuex);
 
@@ -11,7 +12,8 @@ export default new Vuex.Store({
     has_data_load_error: false,
     ux_processes: [],
     process_steps: [],
-    dialog: false
+    dialog: false,
+    user: null
   },
   getters: {
     get_data_load_state: state => {
@@ -23,11 +25,21 @@ export default new Vuex.Store({
     getProcessStep: state => id => {
       return state.process_steps.find(step => step.id === id);
     },
-    getProcessSteps: state => id => {
-      return state.process_steps.filter(step => step.ux_process_id === id);
+    getProcessSteps: (state, getters) => id => {
+      let steps = state.process_steps.filter(step => step.ux_process_id === id);
+      if (!getters.userIsAuthenticated) {
+        steps = [steps[0]];
+      }
+      return steps;
     },
     get_dialog_state: state => {
       return state.dialog;
+    },
+    get_user: state => {
+      return state.user;
+    },
+    userIsAuthenticated: state => {
+      return state.user !== null && state.user !== undefined;
     }
   },
   mutations: {
@@ -48,6 +60,9 @@ export default new Vuex.Store({
     },
     SET_UX_PROCESSES(state, val) {
       Vue.set(state.ux_processes, state.ux_processes.length, val);
+    },
+    SET_USER(state, payload) {
+      state.user = payload;
     }
   },
   actions: {
@@ -80,6 +95,52 @@ export default new Vuex.Store({
             reject(error);
           });
       });
+    },
+    SIGN_UP({ commit }, payload) {
+      this.state.is_data_processing = true;
+      return auth
+        .createUserWithEmailAndPassword(payload.email, payload.password)
+        .then(user => {
+          this.state.is_data_processing = false;
+          const newUser = {
+            id: user.uid,
+            email: user.email
+          };
+          commit("SET_USER", newUser);
+        })
+        .catch(e => {
+          console.log(e);
+        });
+    },
+    LOGIN({ commit }, payload) {
+      this.state.is_data_processing = true;
+      return auth
+        .signInWithEmailAndPassword(payload.email, payload.password)
+        .then(auth => {
+          this.state.is_data_processing = false;
+          const loginUser = {
+            id: auth.user.uid,
+            email: auth.user.email
+          };
+          commit("SET_USER", loginUser);
+        })
+        .catch(e => {
+          this.state.is_data_processing = false;
+          console.log(e.message);
+        });
+    },
+    LOGOUT({ commit }) {
+      this.state.is_data_processing = true;
+      return auth
+        .signOut()
+        .then(() => {
+          this.state.is_data_processing = false;
+          commit("SET_USER", null);
+        })
+        .catch(e => {
+          this.state.is_data_processing = false;
+          console.log(e.message);
+        });
     }
   },
   modules: {}

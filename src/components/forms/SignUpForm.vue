@@ -31,7 +31,12 @@
       @blur="$v.confirmPassword.$touch()"
     ></v-text-field>
 
-    <v-btn :disabled="isFormSubmitReady" class="mr-4" @click="signUp">
+    <v-btn
+      :disabled="isFormSubmitReady"
+      class="mr-4"
+      @click="signUp"
+      :loading="$store.state.is_data_processing"
+    >
       Signup
     </v-btn>
     <v-btn text @click="clearForm">
@@ -42,6 +47,7 @@
 
 <script>
 import { validationMixin } from "vuelidate";
+import { mapActions } from "vuex";
 import { required, minLength, email, sameAs } from "vuelidate/lib/validators";
 
 export default {
@@ -91,14 +97,15 @@ export default {
   },
 
   methods: {
+    ...mapActions(["SIGN_UP"]),
     signUp() {
       this.$v.$touch();
       if (!this.$v.$invalid) {
-        console.log({
+        const payload = {
           email: this.email,
-          password: this.password,
-          confirmPassword: this.confirmPassword
-        });
+          password: this.password
+        };
+        this.$emit("signup", payload);
       }
     },
     clearForm() {
