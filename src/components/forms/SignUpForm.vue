@@ -1,5 +1,5 @@
 <template>
-  <v-form>
+  <v-form @submit.prevent>
     <v-text-field
       v-model="email"
       :error-messages="emailErrors"
