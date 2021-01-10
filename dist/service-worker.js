@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.16c0027c9712a24936055572a815717b.js"
+  "/precache-manifest.8244fbbefc83627481b98e2d19684854.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "the-ux-manual"});
