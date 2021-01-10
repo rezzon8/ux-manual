@@ -1,18 +1,13 @@
 module.exports = {
   transpileDependencies: ["vuetify"],
   pwa: {
-    name: "My App",
-    themeColor: "#4DBA87",
+    name: "The UX Manual",
+    themeColor: "#3f51b5",
     msTileColor: "#000000",
-    appleMobileWebAppCapable: "yes",
+    appleMobileWebAppCapable: "no",
     appleMobileWebAppStatusBarStyle: "black",
 
     // configure the workbox plugin
-    workboxPluginMode: "InjectManifest",
-    workboxOptions: {
-      // swSrc is required in InjectManifest mode.
-      swSrc: "src/registerServiceWorker.js"
-      // ...other Workbox options...
-    }
+    workboxPluginMode: "GenerateSW"
   }
 };

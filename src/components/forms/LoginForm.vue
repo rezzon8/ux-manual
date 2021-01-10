@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <v-form @submit.prevent>
     <v-text-field
       v-model="email"
       :error-messages="emailErrors"
@@ -11,7 +11,7 @@
     <v-text-field
       v-model="password"
       :error-messages="passwordErrors"
-      :counter="16"
+      counter="16"
       label="Password"
       required
       :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
@@ -21,18 +21,24 @@
       @blur="$v.password.$touch()"
     ></v-text-field>
 
-    <v-btn class="mr-4" @click="submit">
+    <v-btn
+      :disabled="isFormSubmitReady"
+      class="mr-4"
+      @click="logIn"
+      :loading="$store.state.is_data_processing"
+    >
       Login
     </v-btn>
-    <v-btn @click="clear">
+    <v-btn text @click="clear">
       clear
     </v-btn>
-  </form>
+  </v-form>
 </template>
 
 <script>
 import { validationMixin } from "vuelidate";
-import { required, maxLength, email } from "vuelidate/lib/validators";
+import { required, email } from "vuelidate/lib/validators";
+
 export default {
   name: "LoginForm",
 
@@ -40,7 +46,7 @@ export default {
 
   validations: {
     email: { required, email },
-    password: { required, maxLength: maxLength(16) }
+    password: { required }
   },
 
   data: () => ({
@@ -50,26 +56,34 @@ export default {
   }),
 
   computed: {
-    passwordErrors() {
-      const errors = [];
-      if (!this.$v.password.$dirty) return errors;
-      !this.$v.password.maxLength &&
-        errors.push("Password must be at most 16 characters long");
-      !this.$v.password.required && errors.push("Password is required.");
-      return errors;
-    },
     emailErrors() {
       const errors = [];
       if (!this.$v.email.$dirty) return errors;
       !this.$v.email.email && errors.push("Must be valid e-mail");
       !this.$v.email.required && errors.push("E-mail is required");
       return errors;
+    },
+    passwordErrors() {
+      const errors = [];
+      if (!this.$v.password.$dirty) return errors;
+      !this.$v.password.required && errors.push("Password is required.");
+      return errors;
+    },
+    isFormSubmitReady() {
+      return this.$v.$invalid;
     }
   },
 
   methods: {
-    submit() {
+    logIn() {
       this.$v.$touch();
+      if (!this.$v.$invalid) {
+        const payload = {
+          email: this.email,
+          password: this.password
+        };
+        this.$emit("login", payload);
+      }
     },
     clear() {
       this.$v.$reset();
