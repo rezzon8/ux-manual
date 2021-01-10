@@ -71,7 +71,7 @@
 </template>
 
 <script>
-import { mapMutations, mapGetters, mapActions } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 import LoginForm from "@/components/forms/LoginForm.vue";
 import SignUpForm from "@/components/forms/SignUpForm.vue";
 
@@ -92,45 +92,38 @@ export default {
     ...mapGetters(["get_dialog_state", "userIsAuthenticated"])
   },
   methods: {
-    ...mapMutations(["SET_DIALOG_STATE"]),
     ...mapActions(["LOGIN"]),
-    closeDialog() {
-      this.SET_DIALOG_STATE(false);
-    },
-    openDialog() {
-      this.SET_DIALOG_STATE(true);
-    },
     signUp(payload) {
       // signup
       this.$store
-        .dispatch("LOGIN", payload)
+        .dispatch("SIGN_UP", payload)
         .then(() => {
-          this.loginDialog = false;
+          this.signUpDialog = false;
         })
         .catch(e => {
-          console.log(e.message, "error in sign up");
+          console.log(e, "error in sign up");
         });
     },
     logIn(payload) {
       // login
       this.$store
         .dispatch("LOGIN", payload)
-        .then(() => {
+        .then(response => {
+          console.log(response);
           this.loginDialog = false;
         })
         .catch(e => {
-          console.log(e.message, "error in login");
+          console.log(e, "error in login");
         });
     },
     logOut() {
-      // logout
       this.$store
         .dispatch("LOGOUT")
         .then(() => {
-          console.log("sdasd");
+          // logged out
         })
         .catch(e => {
-          console.log(e.message, "error in logout");
+          console.log(e, "error in logout");
         });
     }
   },
@@ -138,7 +131,7 @@ export default {
     this.$store
       .dispatch("GET_DATA")
       .then(() => {
-        // console.log("data loaded");
+        // data retrieved
       })
       .catch(e => {
         console.log(e.message);
@@ -147,8 +140,8 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .v-card__text {
-  padding-top: 10px !important;
+  padding-top: 20px !important;
 }
 </style>
