@@ -12,7 +12,9 @@
 
         <p class="subheading font-weight-regular">
           A reference guide and resource for the processes of which UX strategy
-          is comprised
+          is comprised. <br />Please note that this app is
+          <strong>purely for demonstration purposes only!</strong> and forms
+          part of my portfolio.
         </p>
       </v-col>
     </v-row>
