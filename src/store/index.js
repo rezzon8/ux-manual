@@ -27,6 +27,7 @@ export default new Vuex.Store({
     },
     getProcessSteps: (state, getters) => id => {
       let steps = state.process_steps.filter(step => step.ux_process_id === id);
+      // only return one process step if user is not logged in
       if (!getters.userIsAuthenticated) {
         steps = [steps[0]];
       }
@@ -109,7 +110,8 @@ export default new Vuex.Store({
           commit("SET_USER", newUser);
         })
         .catch(e => {
-          console.log(e);
+          this.state.is_data_processing = false;
+          console.log(e.message);
         });
     },
     LOGIN({ commit }, payload) {
@@ -117,6 +119,7 @@ export default new Vuex.Store({
       return auth
         .signInWithEmailAndPassword(payload.email, payload.password)
         .then(auth => {
+          debugger;
           this.state.is_data_processing = false;
           const loginUser = {
             id: auth.user.uid,
@@ -125,6 +128,7 @@ export default new Vuex.Store({
           commit("SET_USER", loginUser);
         })
         .catch(e => {
+          debugger;
           this.state.is_data_processing = false;
           console.log(e.message);
         });
