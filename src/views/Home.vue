@@ -16,6 +16,14 @@
           <strong>purely for demonstration purposes only!</strong> and forms
           part of my portfolio.
         </p>
+
+        <p
+          v-if="!$store.getters.userIsAuthenticated"
+          class="subheading font-weight-regular"
+        >
+          You are currently not logged in. Feel free to signup to reveal all the
+          UX process steps below.
+        </p>
       </v-col>
     </v-row>
     <v-row>
