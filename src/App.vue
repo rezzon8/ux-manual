@@ -89,7 +89,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["get_dialog_state", "userIsAuthenticated"])
+    ...mapGetters(["getDialogState", "userIsAuthenticated"])
   },
   methods: {
     ...mapActions(["LOGIN"]),

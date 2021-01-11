@@ -24,7 +24,7 @@ const props = {
 };
 
 const getters = {
-  get_dialog_state: () => true
+  getDialogState: () => true
 };
 
 const store = new Vuex.Store({ getters, props });
