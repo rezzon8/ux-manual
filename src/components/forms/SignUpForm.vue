@@ -34,12 +34,13 @@
     <v-btn
       :disabled="isFormSubmitReady"
       class="mr-4"
-      @click="signUp"
+      type="submit"
+      @click.native="signUp"
       :loading="$store.state.is_data_processing"
     >
       Signup
     </v-btn>
-    <v-btn text @click="clearForm">
+    <v-btn text @click.native="clearForm" class="clear-form">
       clear
     </v-btn>
   </v-form>
@@ -72,15 +73,15 @@ export default {
     emailErrors() {
       const errors = [];
       if (!this.$v.email.$dirty) return errors;
-      !this.$v.email.email && errors.push("Must be valid e-mail");
-      !this.$v.email.required && errors.push("E-mail is required");
+      !this.$v.email.email && errors.push("Must be valid e-mail.");
+      !this.$v.email.required && errors.push("E-mail is required.");
       return errors;
     },
     passwordErrors() {
       const errors = [];
       if (!this.$v.password.$dirty) return errors;
       !this.$v.password.minLength &&
-        errors.push("Password must be at least 8 characters long");
+        errors.push("Password must be at least 8 characters long.");
       !this.$v.password.required && errors.push("Password is required.");
       return errors;
     },
