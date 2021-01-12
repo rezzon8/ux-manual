@@ -108,8 +108,7 @@ export default {
       // login
       this.$store
         .dispatch("LOGIN", payload)
-        .then(response => {
-          console.log(response);
+        .then(() => {
           this.loginDialog = false;
         })
         .catch(e => {
