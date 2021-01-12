@@ -89,7 +89,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["get_dialog_state", "userIsAuthenticated"])
+    ...mapGetters(["getDialogState", "userIsAuthenticated"])
   },
   methods: {
     ...mapActions(["LOGIN"]),
@@ -108,8 +108,7 @@ export default {
       // login
       this.$store
         .dispatch("LOGIN", payload)
-        .then(response => {
-          console.log(response);
+        .then(() => {
           this.loginDialog = false;
         })
         .catch(e => {

@@ -6,7 +6,7 @@
       scrollable
       @click:outside="$emit('closeDialog')"
     >
-      <v-card v-if="$store.getters.get_data_load_state">
+      <v-card v-if="$store.getters.getDataLoadState">
         <v-card-title class="headline" style="position:relative;">
           <div style="z-index: 1;">
             {{ title }}

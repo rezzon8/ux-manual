@@ -45,7 +45,7 @@ const actions = {
 };
 
 const getters = {
-  get_dialog_state: () => true
+  getDialogState: () => true
 };
 
 const store = new Vuex.Store({ actions, state, getters });

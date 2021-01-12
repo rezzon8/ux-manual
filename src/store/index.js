@@ -16,7 +16,7 @@ export default new Vuex.Store({
     user: null
   },
   getters: {
-    get_data_load_state: state => {
+    getDataLoadState: state => {
       return state.is_data_loaded;
     },
     getUXProcesses: state => {
@@ -33,10 +33,10 @@ export default new Vuex.Store({
       }
       return steps;
     },
-    get_dialog_state: state => {
+    getDialogState: state => {
       return state.dialog;
     },
-    get_user: state => {
+    getUser: state => {
       return state.user;
     },
     userIsAuthenticated: state => {
@@ -119,7 +119,6 @@ export default new Vuex.Store({
       return auth
         .signInWithEmailAndPassword(payload.email, payload.password)
         .then(auth => {
-          debugger;
           this.state.is_data_processing = false;
           const loginUser = {
             id: auth.user.uid,
