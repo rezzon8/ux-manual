@@ -23,13 +23,14 @@
 
     <v-btn
       :disabled="isFormSubmitReady"
-      class="mr-4"
-      @click="logIn"
+      class="mr-4 "
+      type="submit"
+      @click.native="logIn"
       :loading="$store.state.is_data_processing"
     >
       Login
     </v-btn>
-    <v-btn text @click="clear">
+    <v-btn text @click.native="clearForm" class="clear-form">
       clear
     </v-btn>
   </v-form>
@@ -59,8 +60,8 @@ export default {
     emailErrors() {
       const errors = [];
       if (!this.$v.email.$dirty) return errors;
-      !this.$v.email.email && errors.push("Must be valid e-mail");
-      !this.$v.email.required && errors.push("E-mail is required");
+      !this.$v.email.email && errors.push("Must be valid e-mail.");
+      !this.$v.email.required && errors.push("E-mail is required.");
       return errors;
     },
     passwordErrors() {
@@ -85,7 +86,7 @@ export default {
         this.$emit("login", payload);
       }
     },
-    clear() {
+    clearForm() {
       this.$v.$reset();
       this.email = "";
       this.password = "";
