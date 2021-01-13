@@ -133,7 +133,6 @@ export default {
         // data retrieved
       })
       .catch(e => {
-        console.log("sdasd ads");
         return e;
       });
   }
