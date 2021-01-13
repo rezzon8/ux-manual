@@ -79,8 +79,8 @@ export default {
       this.dialog.visible = false;
     },
     openDialog(e) {
-      if (e.id) this.setSelectedStep(e.id, e.color);
       this.dialog.visible = true;
+      if (e.id) this.setSelectedStep(e.id, e.color);
     },
     setSelectedStep(id, color) {
       const processStep = this.getProcessStep(id);
