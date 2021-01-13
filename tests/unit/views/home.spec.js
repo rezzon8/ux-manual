@@ -60,7 +60,6 @@ describe("Home.vue", () => {
     });
   });
   it("should render", () => {
-    console.log(wrapper.html());
     expect(wrapper.exists()).toBe(true);
   });
   it("display a title", () => {

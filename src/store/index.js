@@ -111,7 +111,7 @@ export default new Vuex.Store({
         })
         .catch(e => {
           this.state.is_data_processing = false;
-          console.log(e.message);
+          return e;
         });
     },
     LOGIN({ commit }, payload) {
@@ -129,7 +129,7 @@ export default new Vuex.Store({
         .catch(e => {
           debugger;
           this.state.is_data_processing = false;
-          console.log(e.message);
+          return e;
         });
     },
     LOGOUT({ commit }) {
@@ -142,7 +142,7 @@ export default new Vuex.Store({
         })
         .catch(e => {
           this.state.is_data_processing = false;
-          console.log(e.message);
+          return e;
         });
     }
   },

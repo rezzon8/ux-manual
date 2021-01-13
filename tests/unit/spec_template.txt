@@ -85,51 +85,9 @@ describe("App.vue", () => {
   it("should define a logOut method", () => {
     expect(wrapper.vm.logOut).toBeDefined();
   });
-  it("should dispatch SIGN_UP action", () => {
-    const spy = jest.spyOn(actions, "SIGN_UP");
+  it("should call logIn when the button is clicked", () => {
+    const spy = jest.spyOn(wrapper.vm.store.actions, "SIGN_UP");
     wrapper.vm.signUp();
     expect(spy).toBeCalled();
-  });
-  it("should reject SIGN_UP action", () => {
-    wrapper.vm.$store._actions.SIGN_UP[0] = jest.fn(() => {
-      return Promise.reject();
-    });
-    wrapper.vm.signUp();
-  });
-  it("should dispatch LOGIN action", () => {
-    const spy = jest.spyOn(actions, "LOGIN");
-    wrapper.vm.logIn();
-    expect(spy).toBeCalled();
-  });
-  it("should reject LOGIN action", () => {
-    wrapper.vm.$store._actions.LOGIN[0] = jest.fn(() => {
-      return Promise.reject();
-    });
-    wrapper.vm.logIn();
-  });
-  it("should dispatch LOGOUT action", () => {
-    const spy = jest.spyOn(actions, "LOGOUT");
-    wrapper.vm.logOut();
-    expect(spy).toBeCalled();
-  });
-  it("should reject LOGOUT action", () => {
-    wrapper.vm.$store._actions.LOGOUT[0] = jest.fn(() => {
-      return Promise.reject();
-    });
-    wrapper.vm.logOut();
-  });
-  it("should reject GET_DATA action", () => {
-    actions = {
-      ...actions,
-      GET_DATA: jest.fn(() => {
-        return Promise.reject();
-      })
-    };
-    store = new Vuex.Store({
-      getters,
-      actions
-    });
-    wrapper = factory();
-    wrapper.vm.logOut();
   });
 });

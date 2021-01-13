@@ -13,16 +13,16 @@
       <v-spacer></v-spacer>
 
       <template v-if="!userIsAuthenticated">
-        <v-btn text @click.stop="loginDialog = true">
+        <v-btn text @click.stop="loginDialog = true" id="logIn">
           Login
         </v-btn>
 
-        <v-btn text @click.stop="signUpDialog = true">
+        <v-btn text @click.stop="signUpDialog = true" id="signUp">
           Signup
         </v-btn>
       </template>
       <template v-else>
-        <v-btn text @click.stop="logOut">
+        <v-btn text @click="logOut" id="logOut">
           Logout
         </v-btn>
       </template>
@@ -43,7 +43,7 @@
         <v-divider></v-divider>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn @click.stop="loginDialog = false">
+          <v-btn @click="loginDialog = false">
             Close
           </v-btn>
         </v-card-actions>
@@ -61,7 +61,7 @@
         <v-divider></v-divider>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn @click.stop="signUpDialog = false">
+          <v-btn @click="signUpDialog = false">
             Close
           </v-btn>
         </v-card-actions>
@@ -101,7 +101,7 @@ export default {
           this.signUpDialog = false;
         })
         .catch(e => {
-          console.log(e, "error in sign up");
+          return e;
         });
     },
     logIn(payload) {
@@ -112,7 +112,7 @@ export default {
           this.loginDialog = false;
         })
         .catch(e => {
-          console.log(e, "error in login");
+          return e;
         });
     },
     logOut() {
@@ -122,7 +122,7 @@ export default {
           // logged out
         })
         .catch(e => {
-          console.log(e, "error in logout");
+          return e;
         });
     }
   },
@@ -133,7 +133,7 @@ export default {
         // data retrieved
       })
       .catch(e => {
-        console.log(e.message);
+        return e;
       });
   }
 };

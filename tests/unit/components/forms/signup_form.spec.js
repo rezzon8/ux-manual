@@ -116,7 +116,6 @@ describe("SignUpForm.vue", () => {
     wrapper.vm.clearForm = jest.fn();
     const clearFormBtn = ".clear-form";
     wrapper.find(clearFormBtn).trigger("click");
-    console.log(wrapper.vm.clearForm.mock.calls.length);
     expect(wrapper.vm.clearForm.mock.calls.length).toBe(1);
   });
 });

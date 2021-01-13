@@ -57,8 +57,6 @@ describe("UXProcessSection.vue", () => {
       vuetify,
       propsData: { process_steps: props.process_steps }
     });
-    console.log(wrapper.html());
     await wrapper.trigger("click");
-    console.log(wrapper.html());
   });
 });
