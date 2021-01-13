@@ -74,13 +74,19 @@ describe("LoginForm.vue", () => {
     expect(wrapper.vm.$v.$invalid).toBe(false);
     expect(spy).toBeCalled();
   });
-  it("should fail if the form is not valid", () => {
+  it("should emit with data - allowing login", () => {
     wrapper.vm.logIn();
     wrapper.vm.$emit("login");
     expect(wrapper.emitted().login[0]).toEqual([
       { email: "test@test.com", password: "12345678" }
     ]);
     expect(wrapper.vm.$v.$invalid).toBe(false);
+  });
+  it("should prevent login", () => {
+    wrapper.vm.email = "";
+    wrapper.vm.password = "";
+    wrapper.vm.logIn();
+    expect(wrapper.vm.$v.$invalid).toBe(true);
   });
   it("should compute emailErrors", () => {
     wrapper.vm.$v.email.$touch();
