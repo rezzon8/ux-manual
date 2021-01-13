@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App.vue should render 1`] = `
+<div data-app="true" class="v-application v-application--is-ltr theme--light" id="app">
+  <div class="v-application--wrap">
+    <div class="v-overlay v-overlay--active theme--dark" style="z-index: 5;">
+      <div class="v-overlay__scrim" style="opacity: 0.46; background-color: rgb(33, 33, 33); border-color: #212121;"></div>
+      <div class="v-overlay__content">
+        <div role="progressbar" aria-valuemin="0" aria-valuemax="100" class="v-progress-circular v-progress-circular--indeterminate" style="height: 64px; width: 64px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="21.333333333333332 21.333333333333332 42.666666666666664 42.666666666666664" style="transform: rotate(0deg);">
+            <circle fill="transparent" cx="42.666666666666664" cy="42.666666666666664" r="20" stroke-width="2.6666666666666665" stroke-dasharray="125.664" stroke-dashoffset="125.66370614359172px" class="v-progress-circular__overlay"></circle>
+          </svg>
+          <div class="v-progress-circular__info"></div>
+        </div>
+      </div>
+    </div>
+    <header class="elevation-8 v-sheet theme--light v-toolbar v-app-bar v-app-bar--fixed primary" style="height: 64px; margin-top: 0px; transform: translateY(0px); left: 0px; right: 0px;">
+      <div class="v-toolbar__content" style="height: 64px;"><i aria-hidden="true" class="v-icon notranslate mdi mdi-book-open-page-variant theme--light" style="font-size: 26px;"></i>
+        <div class="v-toolbar__title ml-3">
+          <h2>The UX Manual</h2>
+        </div>
+        <div class="spacer"></div> <button type="button" class="v-btn v-btn--flat v-btn--text theme--light v-size--default" id="logIn"><span class="v-btn__content">
+        Login
+      </span></button> <button type="button" class="v-btn v-btn--flat v-btn--text theme--light v-size--default" id="signUp"><span class="v-btn__content">
+        Signup
+      </span></button>
+      </div>
+    </header>
+    <main class="v-main" style="padding: 64px 0px 0px 0px;">
+      <div class="v-main__wrap"></div>
+    </main>
+    <div role="dialog" class="v-dialog__container">
+      <!---->
+    </div>
+    <div role="dialog" class="v-dialog__container">
+      <!---->
+    </div>
+  </div>
+</div>
+`;
