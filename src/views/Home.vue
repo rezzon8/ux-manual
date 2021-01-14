@@ -64,6 +64,7 @@ export default {
   data() {
     return {
       color: "blue",
+      processID: null,
       dialog: {
         title: "UX Process Step",
         copy: {},
@@ -88,12 +89,12 @@ export default {
       this.dialog.visible = false;
     },
     openDialog(e) {
-      if (e.id) this.setSelectedStep(e.id, e.color);
       this.dialog.visible = true;
+      this.processID = e.id;
+      this.color = e.color;
     },
-    setSelectedStep(id, color) {
-      const processStep = this.getProcessStep(id);
-      this.color = color;
+    setSelectedStep() {
+      const processStep = this.getProcessStep(this.processID);
       this.dialog.title = processStep.title;
       this.dialog.copy = processStep.copy;
     }
