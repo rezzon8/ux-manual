@@ -74,6 +74,15 @@ export default {
   computed: {
     ...mapGetters(["getProcessStep"])
   },
+  watch: {
+    "dialog.visible"(newValue) {
+      if (newValue === true) {
+        this.setSelectedStep();
+      } else {
+        return false;
+      }
+    }
+  },
   methods: {
     closeDialog() {
       this.dialog.visible = false;
