@@ -80,7 +80,7 @@ export default {
       if (newValue === true) {
         this.setSelectedStep();
       } else {
-        console.log("asdasd");
+        return false;
       }
     }
   },
