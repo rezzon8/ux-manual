@@ -31,6 +31,13 @@ document.body.setAttribute("data-app", true);
 const factory = () => {
   return mount(Home, {
     propsData: {},
+    computed: {
+      getProcessStep() {
+        return jest.fn(() => {
+          return { title: "asda", copy: { introduction: "copy" } };
+        });
+      }
+    },
     data: () => ({
       color: "blue",
       dialog: {
@@ -60,8 +67,7 @@ describe("App.vue", () => {
       ]
     };
     getters = {
-      userIsAuthenticated: jest.fn(() => false),
-      getProcessStep: state => state.process_steps[0]
+      userIsAuthenticated: jest.fn(() => false)
     };
     actions = {
       GET_DATA: jest.fn(),
@@ -102,9 +108,15 @@ describe("App.vue", () => {
     wrapper.vm.closeDialog();
     expect(wrapper.vm.dialog.visible).toBe(false);
   });
-  xit("should show the dialog", () => {
+  it("should fail to run method if dialog.visible is false", () => {
+    // NOTE: testing watcher
+    wrapper.vm.$options.watch["dialog.visible"].call(wrapper.vm, false);
+    wrapper.vm.closeDialog();
+    expect(wrapper.vm.dialog.visible).toBe(false);
+  });
+  it("should show the dialog", () => {
     wrapper.vm.dialog.visible = false;
-    wrapper.vm.openDialog();
+    wrapper.vm.openDialog({ id: 1, color: "blue" });
     expect(wrapper.vm.dialog.visible).toBe(true);
   });
 });

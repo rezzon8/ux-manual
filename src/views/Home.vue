@@ -64,6 +64,7 @@ export default {
   data() {
     return {
       color: "blue",
+      processID: null,
       dialog: {
         title: "UX Process Step",
         copy: {},
@@ -74,17 +75,26 @@ export default {
   computed: {
     ...mapGetters(["getProcessStep"])
   },
+  watch: {
+    "dialog.visible"(newValue) {
+      if (newValue === true) {
+        this.setSelectedStep();
+      } else {
+        console.log("asdasd");
+      }
+    }
+  },
   methods: {
     closeDialog() {
       this.dialog.visible = false;
     },
     openDialog(e) {
       this.dialog.visible = true;
-      if (e.id) this.setSelectedStep(e.id, e.color);
+      this.processID = e.id;
+      this.color = e.color;
     },
-    setSelectedStep(id, color) {
-      const processStep = this.getProcessStep(id);
-      this.color = color;
+    setSelectedStep() {
+      const processStep = this.getProcessStep(this.processID);
       this.dialog.title = processStep.title;
       this.dialog.copy = processStep.copy;
     }
