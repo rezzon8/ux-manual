@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App.vue should render 1`] = `
+<div class="container home">
+  <div class="row text-center">
+    <div class="mb-4 col">
+      <h1 class="display-2 font-weight-bold mb-3 mt-3 animate__animated animate__tada animate__delay-2s"><i aria-hidden="true" class="v-icon notranslate mb-3 mdi mdi-book-open-page-variant theme--light" style="font-size: 62px;"></i> <br>
+        The UX Manual
+      </h1>
+      <p class="subheading font-weight-regular">
+        A reference guide and resource for the processes of which UX strategy
+        is comprised. <br>Please note that this app is
+        <strong>purely for demonstration purposes only!</strong> and forms
+        part of my portfolio.
+      </p>
+      <p class="subheading font-weight-regular">
+        You are currently not logged in. Feel free to signup to reveal all the
+        UX process steps below.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="text-center">
+        <div role="dialog" class="v-dialog__container">
+          <!---->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -12,6 +12,9 @@ Vue.use(Vuetify); // added to prevent vuetify lint errors
 const localVue = createLocalVue();
 const vuetify = new Vuetify();
 
+// fixes: [Vuetify] Unable to locate target [data-app]
+document.body.setAttribute("data-app", true);
+
 let wrapper;
 let router;
 let store;
